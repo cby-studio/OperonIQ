@@ -22,7 +22,6 @@ import type {
 
 export const navItems: NavItem[] = [
   { label: 'Capabilities', href: '/capabilities' },
-  { label: 'Services', href: '/services' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ];
