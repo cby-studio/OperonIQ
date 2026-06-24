@@ -19,7 +19,7 @@
   ],
   "workers_dev": true,
   "vars": {
-    "NOTIFY_EMAIL": "vmarin@bnetsystems.com",
+    "NOTIFY_EMAIL": "chubby07@gmail.com",
     "FROM_EMAIL": "onboarding@resend.dev"
   },
   "secrets": {
