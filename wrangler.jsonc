@@ -17,12 +17,7 @@
       "service": "operoniq"
     }
   ],
-  "routes": [
-    {
-      "pattern": "operoniq.chubby07.workers.dev/api/nexiq",
-      "zone_name": "chubby07.workers.dev"
-    }
-  ],
+  "workers_dev": true,
   "vars": {
     "NOTIFY_EMAIL": "vmarin@bnetsystems.com",
     "FROM_EMAIL": "onboarding@resend.dev"
