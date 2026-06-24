@@ -1,6 +1,4 @@
-import { ContactForm } from '@/components/home/ContactForm';
-import { GradientSeparator } from '@/components/home/GradientSeparator';
-import { PageIntro } from '@/components/home/PageIntro';
+import { NexIQ } from '@/components/NexIQ';
 import { SiteFrame } from '@/components/home/SiteFrame';
 
 export const metadata = {
@@ -12,13 +10,7 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <SiteFrame>
-      <PageIntro
-        eyebrow="Contact"
-        title="Start the conversation."
-        description="Tell us about the operating challenge, trusted data priority, platform opportunity or digital workforce question you are working through."
-      />
-      <GradientSeparator />
-      <ContactForm />
+      <NexIQ />
     </SiteFrame>
   );
 }

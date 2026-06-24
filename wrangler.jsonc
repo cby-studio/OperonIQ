@@ -16,5 +16,18 @@
       "binding": "WORKER_SELF_REFERENCE",
       "service": "operoniq"
     }
-  ]
+  ],
+  "routes": [
+    {
+      "pattern": "operoniq.chubby07.workers.dev/api/nexiq",
+      "zone_name": "chubby07.workers.dev"
+    }
+  ],
+  "vars": {
+    "NOTIFY_EMAIL": "vmarin@bnetsystems.com",
+    "FROM_EMAIL": "nexiq@operoniq.com"
+  },
+  "secrets": {
+    "required": ["ANTHROPIC_API_KEY", "RESEND_API_KEY"]
+  }
 }
