@@ -38,14 +38,6 @@ export function CapabilityCard({ capability }: CapabilityCardProps) {
           {capability.description}
         </p>
 
-        <div className="mt-auto pt-8">
-          <div className="flex items-center gap-3">
-            <div className="h-px flex-1 bg-gradient-to-r from-operon-blue/45 via-operon-cyan/35 to-transparent" />
-            <span className="text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-slate-600 transition duration-300 group-hover:text-operon-cyan">
-              Agentic Capability
-            </span>
-          </div>
-        </div>
       </div>
     </article>
   );

@@ -1,11 +1,9 @@
-import { AgenticAiServicesSection } from '@/components/home/AgenticAiServicesSection';
 import { CapabilitiesSection } from '@/components/home/CapabilitiesSection';
-import { ControlTowerSection } from '@/components/home/ControlTowerSection';
 import { FinalCTA } from '@/components/home/FinalCTA';
 import { GradientSeparator } from '@/components/home/GradientSeparator';
 import { HeroSection } from '@/components/home/HeroSection';
+import { OperatingModelSection } from '@/components/home/OperatingModelSection';
 import { ProblemSection } from '@/components/home/ProblemSection';
-import { ServicesSection } from '@/components/home/ServicesSection';
 import { SiteFrame } from '@/components/home/SiteFrame';
 import { TargetAudienceSection } from '@/components/home/TargetAudienceSection';
 
@@ -18,11 +16,7 @@ export default function Home() {
       <GradientSeparator />
       <CapabilitiesSection />
       <GradientSeparator />
-      <AgenticAiServicesSection />
-      <GradientSeparator />
-      <ControlTowerSection />
-      <GradientSeparator />
-      <ServicesSection />
+      <OperatingModelSection />
       <GradientSeparator />
       <TargetAudienceSection />
       <GradientSeparator />

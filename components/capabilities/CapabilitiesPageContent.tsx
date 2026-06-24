@@ -6,18 +6,29 @@ import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 
 const LOGO_MAP: Record<string, string> = {
-  'Microsoft 365': '/logos/microsoft-365.svg',
-  'Azure AI': '/logos/azure-ai.svg',
+  'Microsoft 365':    '/logos/microsoft-365.svg',
+  'Teams':            '/logos/teams.svg',
+  'SharePoint':       '/logos/sharepoint.svg',
+  'Viva':             '/logos/viva.svg',
+  'Copilot':          '/logos/microsoft-copilot.svg',
+  'Copilot Studio':   '/logos/microsoft-copilot.svg',
+  'Power Platform':   '/logos/power-platform.svg',
+  'Power Automate':   '/logos/power-automate.svg',
+  'Dynamics 365':     '/logos/dynamics-365.svg',
+  'Business Central': '/logos/business-central.svg',
+  'Microsoft Fabric': '/logos/microsoft-fabric.svg',
+  'Power BI':         '/logos/power-bi.svg',
+  'Azure AI':         '/logos/azure-ai.svg',
   'Azure AI Foundry': '/logos/azure-ai.svg',
   'Azure Data Services': '/logos/azure-data-services.svg',
-  'Azure OpenAI': '/logos/azure-openai.svg',
-  'Databricks': '/logos/databricks.svg',
-  'Logic Apps': '/logos/logic-apps.svg',
-  'Copilot': '/logos/microsoft-copilot.svg',
-  'Copilot Studio': '/logos/microsoft-copilot.svg',
-  'Microsoft Fabric': '/logos/microsoft-fabric.svg',
-  'Power Automate': '/logos/power-automate.svg',
-  'Power BI': '/logos/power-bi.svg',
+  'Azure OpenAI':     '/logos/azure-openai.svg',
+  'Databricks':       '/logos/databricks.svg',
+  'Snowflake':        '/logos/snowflake.svg',
+  'Logic Apps':       '/logos/logic-apps.svg',
+  'Python':           '/logos/python.svg',
+  'LangGraph':        '/logos/langchain.svg',
+  'LangChain':        '/logos/langchain.svg',
+  'MLflow':           '/logos/mlflow.svg',
 };
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -611,37 +622,37 @@ const PILLARS: PillarData[] = [
 const ENGAGE_CARDS: EngageCard[] = [
   {
     title: 'AI Readiness Assessment',
-    meta: '2–4 weeks · Fixed fee',
+    meta: '2–4 weeks',
     description:
       'Assess AI maturity, data exposure, governance gaps and build an executive roadmap.',
   },
   {
     title: 'Business Transformation Assessment',
-    meta: '4–6 weeks · Fixed fee',
+    meta: '4–6 weeks',
     description:
       'Map process friction and design the target operating model with a value-linked roadmap.',
   },
   {
     title: 'Data Platform Readiness',
-    meta: '2–4 weeks · Fixed fee',
+    meta: '2–4 weeks',
     description:
       'Evaluate Fabric, Snowflake, Databricks, analytics maturity and data governance posture.',
   },
   {
     title: 'Copilot Enablement Programme',
-    meta: '1–3 months · Fixed scope',
+    meta: '1–3 months',
     description:
       'Prepare people, processes, content and governance for Microsoft Copilot at scale.',
   },
   {
     title: 'Automation Discovery',
-    meta: '2–3 weeks · Fixed fee',
+    meta: '2–3 weeks',
     description:
       'Identify high-value automation opportunities and quantify the business case for action.',
   },
   {
     title: 'Fractional Architecture Services',
-    meta: 'Ongoing · Monthly retainer',
+    meta: 'Ongoing',
     description: 'Strategic advisory across business, data, applications, automation and AI.',
   },
 ];
@@ -720,8 +731,11 @@ function ServiceCard({
   onToggle: () => void;
 }) {
   const [hovered, setHovered] = useState(false);
-  const borderColor =
-    isOpen || hovered ? 'rgba(255,255,255,0.16)' : 'rgba(255,255,255,0.07)';
+  const borderColor = isOpen
+    ? 'rgba(32,197,232,0.38)'
+    : hovered
+      ? 'rgba(32,197,232,0.18)'
+      : 'rgba(255,255,255,0.07)';
 
   return (
     <div
@@ -745,7 +759,7 @@ function ServiceCard({
           {service.name}
         </span>
         <ChevronDown
-          className="h-4 w-4 shrink-0 text-slate-500 transition-transform duration-200"
+          className={`h-4 w-4 shrink-0 transition-transform duration-200 ${isOpen ? 'text-operon-cyan' : 'text-slate-500'}`}
           style={{ transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}
         />
       </button>
@@ -759,12 +773,12 @@ function ServiceCard({
           {/* Business Challenge */}
           <div className="mb-4">
             <p
-              className="mb-1.5 text-slate-500"
-              style={{ fontSize: 10, letterSpacing: '0.13em', textTransform: 'uppercase', fontWeight: 600 }}
+              className="mb-1.5 text-operon-cyan"
+              style={{ fontSize: 10, letterSpacing: '0.13em', textTransform: 'uppercase', fontWeight: 600, opacity: 0.75 }}
             >
               Business Challenge
             </p>
-            <p className="text-slate-400" style={{ fontSize: 12, lineHeight: 1.65 }}>
+            <p className="text-slate-300" style={{ fontSize: 12, lineHeight: 1.65 }}>
               {service.challenge}
             </p>
           </div>
@@ -772,15 +786,15 @@ function ServiceCard({
           {/* Expected Outcomes */}
           <div className="mb-4">
             <p
-              className="mb-1.5 text-slate-500"
-              style={{ fontSize: 10, letterSpacing: '0.13em', textTransform: 'uppercase', fontWeight: 600 }}
+              className="mb-1.5 text-operon-blue"
+              style={{ fontSize: 10, letterSpacing: '0.13em', textTransform: 'uppercase', fontWeight: 600, opacity: 0.8 }}
             >
               Expected Outcomes
             </p>
             <ul className="space-y-1.5">
               {service.outcomes.map((o) => (
-                <li key={o} className="flex items-start gap-2 text-slate-400" style={{ fontSize: 12, lineHeight: 1.6 }}>
-                  <span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-slate-600" />
+                <li key={o} className="flex items-start gap-2 text-slate-300" style={{ fontSize: 12, lineHeight: 1.6 }}>
+                  <span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-operon-blue/50" />
                   {o}
                 </li>
               ))}
@@ -790,15 +804,15 @@ function ServiceCard({
           {/* Deliverables */}
           <div className={service.tags && service.tags.length > 0 ? 'mb-4' : ''}>
             <p
-              className="mb-1.5 text-slate-500"
-              style={{ fontSize: 10, letterSpacing: '0.13em', textTransform: 'uppercase', fontWeight: 600 }}
+              className="mb-1.5 text-operon-green"
+              style={{ fontSize: 10, letterSpacing: '0.13em', textTransform: 'uppercase', fontWeight: 600, opacity: 0.8 }}
             >
               Deliverables
             </p>
             <ul className="space-y-1.5">
               {service.deliverables.map((d) => (
-                <li key={d} className="flex items-start gap-2 text-slate-400" style={{ fontSize: 12, lineHeight: 1.6 }}>
-                  <span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-slate-600" />
+                <li key={d} className="flex items-start gap-2 text-slate-300" style={{ fontSize: 12, lineHeight: 1.6 }}>
+                  <span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-operon-green/50" />
                   {d}
                 </li>
               ))}
@@ -835,22 +849,22 @@ function PillarSection({ pillar }: { pillar: PillarData }) {
   return (
     <div>
       {/* Part 1 — Pillar header */}
-      <div className="relative flex items-start justify-between" style={{ padding: '2rem 2rem 1.25rem' }}>
+      <div className="relative flex items-start justify-between px-4 pb-5 pt-6 sm:px-8 sm:pt-8">
         <div style={{ maxWidth: 520 }}>
-          <h2 className="text-white" style={{ fontSize: 20, fontWeight: 500, lineHeight: 1.3 }}>
+          <h2 className="text-operon-green" style={{ fontSize: 13, fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', lineHeight: 1.3 }}>
             {pillar.name}
           </h2>
-          <p className="mt-2 text-slate-400" style={{ fontSize: 13, lineHeight: 1.65, maxWidth: 480 }}>
+          <p className="mt-2 text-slate-300" style={{ fontSize: 13, lineHeight: 1.65, maxWidth: 480 }}>
             {pillar.conviction}
           </p>
         </div>
       </div>
 
       {/* Part 2 — Ecosystem strip */}
-      <div className="bg-navy-900" style={{ padding: '0.9rem 2rem' }}>
+      <div className="bg-navy-900 px-4 py-3 sm:px-8">
         <p
-          className="mb-2.5 text-slate-500"
-          style={{ fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', fontWeight: 600 }}
+          className="mb-2.5 text-operon-cyan"
+          style={{ fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', fontWeight: 600, opacity: 0.7 }}
         >
           Ecosystem
         </p>
@@ -863,11 +877,10 @@ function PillarSection({ pillar }: { pillar: PillarData }) {
 
       {/* Part 3 — Service cards grid */}
       <div
-        className="grid gap-3"
+        className="grid grid-cols-1 gap-3 sm:grid-cols-2"
         style={{
-          gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
           alignItems: 'start',
-          padding: '1.5rem 2rem 2.5rem',
+          padding: '1.25rem 1rem 2.5rem',
         }}
       >
         {pillar.services.map((service) => (
@@ -899,9 +912,9 @@ export function CapabilitiesPageContent() {
 
         <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3">
-            <div className="h-px w-6 bg-white/20" />
+            <div className="h-px w-6 bg-operon-cyan/40" />
             <p
-              className="text-slate-400"
+              className="text-operon-cyan"
               style={{ fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 600 }}
             >
               Capabilities
@@ -926,28 +939,29 @@ export function CapabilitiesPageContent() {
         className="sticky z-20 border-b border-white/[0.08] bg-navy-950/95 backdrop-blur-xl"
         style={{ top: 96 }}
       >
-        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-          <div className="flex">
+        <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div className="flex overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {PILLARS.map((p) => {
               const isActive = p.id === activeTab;
               return (
                 <button
                   key={p.id}
                   onClick={() => setActiveTab(p.id)}
-                  className="flex flex-1 flex-col items-center gap-0.5 px-1 py-3 text-center transition-colors duration-150"
+                  className="flex shrink-0 flex-col items-center gap-0.5 px-3 py-3 text-center transition-colors duration-150 sm:flex-1 sm:px-1"
                   style={{
-                    borderBottom: isActive ? '2px solid #fff' : '2px solid transparent',
+                    minWidth: 80,
+                    borderBottom: isActive ? '2px solid #20C5E8' : '2px solid transparent',
                   }}
                 >
                   <span
                     style={{ fontSize: 9, fontWeight: 500 }}
-                    className={isActive ? 'text-slate-400' : 'text-slate-600'}
+                    className={isActive ? 'text-operon-cyan/70' : 'text-slate-600'}
                   >
                     {p.number}
                   </span>
                   <span
-                    style={{ fontSize: 11, fontWeight: 500, lineHeight: 1.3 }}
-                    className={isActive ? 'text-white' : 'text-slate-500'}
+                    style={{ fontSize: 11, fontWeight: 600, lineHeight: 1.3 }}
+                    className={isActive ? 'text-operon-green' : 'text-slate-500'}
                   >
                     {p.name}
                   </span>
@@ -968,9 +982,9 @@ export function CapabilitiesPageContent() {
         <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
           {/* Eyebrow */}
           <div className="mb-6 flex items-center gap-3">
-            <div className="h-px w-6 bg-white/20" />
+            <div className="h-px w-6 bg-operon-cyan/40" />
             <p
-              className="text-slate-400"
+              className="text-operon-cyan"
               style={{ fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 600 }}
             >
               How to Engage
@@ -1007,7 +1021,7 @@ export function CapabilitiesPageContent() {
             Every assessment is designed to reveal a larger transformation roadmap.{' '}
             <Link
               href="/contact"
-              className="text-slate-300 underline-offset-2 transition-colors duration-150 hover:text-white"
+              className="text-operon-cyan underline-offset-2 transition-colors duration-150 hover:text-white"
             >
               Start the Conversation →
             </Link>
