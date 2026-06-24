@@ -11,7 +11,7 @@ export function FinalCTA() {
               Ready to build an Agentic Enterprise?
             </h2>
             <GradientButton
-              href="mailto:hello@operoniq.com"
+              href="/contact"
               variant="light"
               className="mt-10"
             >
