@@ -8,7 +8,10 @@ export function ProblemSection() {
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-operon-cyan">
             The challenge
           </p>
-          <h2 className="mt-5 max-w-2xl text-4xl font-semibold leading-tight tracking-normal text-white sm:text-5xl">
+          <p className="mt-2 mb-4 text-[13px] italic text-operon-cyan" style={{ letterSpacing: '0.01em' }}>
+            AI does not fix operational chaos. It amplifies it.
+          </p>
+          <h2 className="max-w-2xl text-4xl font-semibold leading-tight tracking-normal text-white sm:text-5xl">
             AI-powered workforces need more than disconnected tools.
           </h2>
         </div>
