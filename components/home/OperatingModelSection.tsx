@@ -1,8 +1,17 @@
-import { operatingModel } from './content';
+import { useTranslations } from 'next-intl';
+import { operatingModelStepKeys } from './content';
 
 const STEP_COLORS = ['#1495FF', '#18B4F0', '#20C5E8', '#2EC87A', '#44D062'];
 
 export function OperatingModelSection() {
+  const t = useTranslations('Home.OperatingModel');
+
+  const steps = operatingModelStepKeys.map((key) => ({
+    key,
+    title: t(`steps.${key}.title`),
+    text: t(`steps.${key}.text`),
+  }));
+
   return (
     <section id="operating-model" className="relative overflow-hidden py-28">
       {/* Atmospheric glow */}
@@ -15,24 +24,24 @@ export function OperatingModelSection() {
         <div className="grid gap-6 lg:grid-cols-2 lg:items-end">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-operon-cyan">
-              How We Work
+              {t('eyebrow')}
             </p>
             <h2 className="mt-5 text-4xl font-semibold leading-tight tracking-normal text-white sm:text-5xl">
-              How Agentic Enterprise Work Takes Shape
+              {t('title')}
             </h2>
           </div>
           <p className="text-lg leading-8 text-slate-300 lg:text-right">
-            From initial discovery to a governed, scaling agentic operation.
+            {t('description')}
           </p>
         </div>
 
         {/* Step cards */}
         <div className="mt-16 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-5 lg:gap-2">
-          {operatingModel.map((step, i) => {
+          {steps.map((step, i) => {
             const color = STEP_COLORS[i];
             return (
               <div
-                key={step.title}
+                key={step.key}
                 className="group relative flex flex-col overflow-hidden rounded-xl p-5 transition duration-300 hover:bg-white/[0.045]"
                 style={{
                   background: 'rgba(255,255,255,0.025)',
@@ -80,11 +89,11 @@ export function OperatingModelSection() {
 
         {/* Flow indicator */}
         <div className="mt-8 hidden items-center justify-center gap-2 lg:flex">
-          {operatingModel.map((step, i) => {
+          {steps.map((step, i) => {
             const color = STEP_COLORS[i];
-            const isLast = i === operatingModel.length - 1;
+            const isLast = i === steps.length - 1;
             return (
-              <div key={step.title} className="flex items-center gap-2">
+              <div key={step.key} className="flex items-center gap-2">
                 <span className="text-[10px] font-semibold tracking-wider" style={{ color, opacity: 0.7 }}>
                   {step.title}
                 </span>

@@ -1,0 +1,734 @@
+{
+  "Metadata": {
+    "home": {
+      "title": "OperonIQ | Agentic Enterprise Consulting",
+      "description": "OperonIQ helps organizations redesign operations, unlock trusted data and deploy AI-powered digital workforces through modern business platforms, automation and governance."
+    },
+    "about": {
+      "title": "About | OperonIQ",
+      "description": "OperonIQ brings together senior practitioners across business transformation, process design, data architecture, enterprise platforms and AI into a single integrated delivery model."
+    },
+    "capabilities": {
+      "title": "Capabilities | OperonIQ",
+      "description": "Explore the six capabilities behind the OperonIQ Transformation Engine — from operating model design and trusted data to intelligent automation, agentic AI and responsible governance."
+    },
+    "contact": {
+      "title": "Contact | OperonIQ",
+      "description": "Contact OperonIQ to discuss Agentic Enterprise strategy, trusted data, automation, digital workforces and governance."
+    }
+  },
+  "Nav": {
+    "capabilities": "Capabilities",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Start the Conversation"
+  },
+  "Footer": {
+    "tagline": "© {year} OperonIQ. Orchestrating Intelligent Business through Data, Automation & AI."
+  },
+  "LanguageSwitcher": {
+    "label": "Language"
+  },
+  "Home": {
+    "Hero": {
+      "badge": "AGENTIC ENTERPRISE CONSULTING",
+      "title": "Building Agentic Enterprises",
+      "description": "OperonIQ helps organizations connect people, data, applications, automation and AI into one intelligent operating model.",
+      "ctaPrimary": "Start the Conversation",
+      "ctaSecondary": "Explore Capabilities"
+    },
+    "Diagram": {
+      "eyebrow": "Agentic Operating Model",
+      "description": "People, platforms and digital workforces connected by governance.",
+      "badge": "Enterprise Layer",
+      "ariaLabel": "Agentic Operating Model — seven enterprise layers connected to the OperonIQ Intelligence Layer",
+      "nodes": {
+        "people": "People",
+        "process": "Process",
+        "data": "Data",
+        "applications": "Applications",
+        "automation": "Automation",
+        "aiAgents": "AI Agents",
+        "governance": "Governance"
+      },
+      "core": {
+        "brand": "OPERONIQ",
+        "title": "Intelligence Layer",
+        "subtitle": "Trusted data · governed AI"
+      }
+    },
+    "Problem": {
+      "eyebrow": "The challenge",
+      "quote": "AI does not fix operational chaos. It amplifies it.",
+      "title": "AI-powered workforces need more than disconnected tools.",
+      "body": "Many organizations are experimenting with AI while core operations still depend on fragmented processes, disconnected data, manual reporting, platform sprawl and weak governance.",
+      "signals": [
+        "Fragmented processes",
+        "Disconnected data",
+        "Manual reporting",
+        "Platform sprawl",
+        "Weak governance"
+      ]
+    },
+    "Capabilities": {
+      "eyebrow": "Capabilities",
+      "title": "Six Capabilities. One Agentic Transformation Engine.",
+      "description": "OperonIQ combines business transformation, modern work, data platforms, business applications, intelligent automation and governance to help organizations become AI-ready and agentic.",
+      "items": {
+        "01": {
+          "title": "Business Transformation & Operating Model Design",
+          "headline": "Redesign how the business operates before introducing technology.",
+          "description": "We map processes, operating models and value opportunities to identify where automation and AI agents can create measurable impact."
+        },
+        "02": {
+          "title": "Modern Work & Intelligent Collaboration",
+          "headline": "Create an AI-ready workplace for people and digital workers.",
+          "description": "Create an AI-ready workplace where people, knowledge and digital workers collaborate effectively across Microsoft 365, Teams, SharePoint, Viva and Copilot-ready environments."
+        },
+        "03": {
+          "title": "Data, Analytics & AI Foundations",
+          "headline": "Build trusted data platforms that power decisions and agents.",
+          "description": "Build trusted data platforms that power decisions, automation and AI using Microsoft Fabric, Snowflake, Databricks, Power BI, Python, machine learning and data governance."
+        },
+        "04": {
+          "title": "Connected Business Applications",
+          "headline": "Connect CRM, ERP and operational workflows.",
+          "description": "Connect CRM, ERP and operational workflows across Dynamics 365, Business Central and business platforms so AI agents can interact with real systems of record."
+        },
+        "05": {
+          "title": "Intelligent Automation & Agentic AI",
+          "headline": "Design digital workforces that accelerate execution.",
+          "description": "Design, deploy and govern AI agents, multi-agent architectures, workflow automation and digital workforces using Python, machine learning and cloud AI services to reduce manual work and accelerate execution."
+        },
+        "06": {
+          "title": "Governance, Quality & Responsible AI",
+          "headline": "Keep agentic transformation secure, controlled and scalable.",
+          "description": "Embed QA, platform governance, testing, controls, adoption validation and responsible AI guardrails into every transformation initiative."
+        }
+      }
+    },
+    "OperatingModel": {
+      "eyebrow": "How We Work",
+      "title": "How Agentic Enterprise Work Takes Shape",
+      "description": "From initial discovery to a governed, scaling agentic operation.",
+      "steps": {
+        "discover": {
+          "title": "Discover",
+          "text": "Clarify strategic priorities, process friction, trusted data gaps and readiness for AI-powered digital workforces."
+        },
+        "design": {
+          "title": "Design",
+          "text": "Define the target operating model, platform architecture, governance and value cases for agentic operations."
+        },
+        "orchestrate": {
+          "title": "Orchestrate",
+          "text": "Coordinate data, applications, automation and AI agents into a connected execution model."
+        },
+        "govern": {
+          "title": "Govern",
+          "text": "Establish decision rights, quality controls, platform standards and responsible agentic guardrails."
+        },
+        "scale": {
+          "title": "Scale",
+          "text": "Scale digital workforce patterns through enablement, measurement and executive operating rhythms."
+        }
+      }
+    },
+    "Audience": {
+      "eyebrow": "Who we help",
+      "title": "Built for organizations ready to operationalize AI.",
+      "body": "Mid-market and enterprise organizations modernizing operations, trusted data, business platforms and governance so AI-powered digital workforces can scale with confidence."
+    },
+    "FinalCTA": {
+      "title": "Ready to build an Agentic Enterprise?",
+      "cta": "Start the Conversation"
+    }
+  },
+  "About": {
+    "hero": {
+      "eyebrow": "About OperonIQ",
+      "titleLine1": "Built on Deep Expertise.",
+      "titleLine2": "Delivered as Integrated Transformation.",
+      "body": "OperonIQ brings together senior practitioners across business transformation, process redesign, data architecture, enterprise platforms, intelligent automation and AI — unified into a single delivery model that connects strategic intent to measurable operational change."
+    },
+    "conviction": {
+      "eyebrow": "Our Conviction",
+      "title": "Real transformation starts before the technology.",
+      "p1": "Before any platform is selected or AI agent deployed, the business process must be understood, redesigned and owned by the people who run it. Technology layered onto poorly defined or fragmented processes does not create capability — it creates complexity at scale.",
+      "p2Prefix": "OperonIQ treats",
+      "p2Bold": "business process redesign as the foundation of every engagement",
+      "p2Suffix": ". We map how work actually flows, identify where it breaks down, and design the target operating model before recommending a single tool or platform. This is not a discovery phase — it is the work.",
+      "calloutLabel": "Our Approach to Process Redesign",
+      "calloutItems": [
+        "Map current-state processes, decision points and friction across functions",
+        "Design the target operating model with clear ownership and value linkage",
+        "Identify where automation, AI agents and data can enhance redesigned processes",
+        "Validate change impact and align leadership before deployment begins"
+      ],
+      "beliefs": {
+        "processBeforePlatform": {
+          "label": "Process Before Platform",
+          "note": "Operating model clarity precedes any technology selection."
+        },
+        "trustedData": {
+          "label": "Trusted Data",
+          "note": "Governed, quality-assured intelligence at the foundation of every decision."
+        },
+        "intelligentAutomation": {
+          "label": "Intelligent Automation",
+          "note": "Automation that reasons, adapts and escalates — not just executes rules."
+        },
+        "responsibleAi": {
+          "label": "Responsible AI",
+          "note": "Deployed with explainability, fairness and human oversight built in."
+        },
+        "measurableOutcomes": {
+          "label": "Measurable Outcomes",
+          "note": "Value validated at every stage, not just at programme close."
+        }
+      }
+    },
+    "why": {
+      "eyebrow": "Why OperonIQ",
+      "title": "The market fragments what organisations need whole.",
+      "p1": "Most advisory firms are organised around a single discipline — business consulting, data engineering, Microsoft platforms, or AI strategy. Clients are left to coordinate between providers, reconcile competing recommendations, and absorb the gaps that form between specialisms.",
+      "p2": "OperonIQ was created to close those gaps. Our practitioners hold depth across business, data, platform and AI — and our delivery model is designed so those disciplines reinforce each other rather than operating in sequence.",
+      "marketLabel": "What the market offers separately",
+      "marketItems": [
+        "Business Consulting",
+        "Data Consulting",
+        "Microsoft Advisory",
+        "AI Consulting"
+      ],
+      "unify": "OperonIQ unifies all of them into one integrated transformation model."
+    },
+    "expertise": {
+      "eyebrow": "Our Expertise",
+      "description": "Six integrated capability areas, each underpinned by senior practitioners with deep domain knowledge and hands-on delivery experience.",
+      "items": {
+        "01": {
+          "title": "Business Transformation",
+          "description": "Operating model redesign, process mapping, value-linked transformation roadmaps and structured change enablement. The foundation before any platform or agent is introduced."
+        },
+        "02": {
+          "title": "Modern Work",
+          "description": "Microsoft 365 strategy, Copilot readiness, knowledge architecture and collaboration governance to build AI-ready workplaces where people and digital workers operate effectively."
+        },
+        "03": {
+          "title": "Data & Analytics",
+          "description": "Data platform modernisation, semantic layer design, analytics strategy, governance frameworks and AI-ready data foundations using Fabric, Snowflake, Databricks and Power BI."
+        },
+        "04": {
+          "title": "Business Applications",
+          "description": "Dynamics 365, Business Central and Power Platform advisory to connect CRM, ERP and operational workflows — creating the system-of-record layer that AI agents can act on."
+        },
+        "05": {
+          "title": "Automation & Agentic AI",
+          "description": "Agent design and deployment, multi-agent architectures, digital workforce strategy and intelligent automation programmes that reduce manual effort and accelerate execution."
+        },
+        "06": {
+          "title": "Governance & Quality",
+          "description": "Responsible AI frameworks, quality engineering, platform governance and automated testing practices that keep transformation controlled, auditable and scalable."
+        }
+      }
+    },
+    "techEcosystem": {
+      "eyebrow": "Technology Ecosystem",
+      "description": "We are technology-agnostic in approach and opinionated in execution. The platforms below are the tools we use to deliver transformation — not products we sell.",
+      "groups": {
+        "microsoft": "Microsoft Ecosystem",
+        "dataCloud": "Data & Cloud",
+        "engineeringAi": "Engineering & AI"
+      }
+    }
+  },
+  "Capabilities": {
+    "hero": {
+      "eyebrow": "Capabilities",
+      "title": "Six capabilities. One transformation engine.",
+      "description": "Each pillar addresses a distinct layer of the operating model. Together they form the integrated capability that makes agentic transformation possible."
+    },
+    "ecosystemLabel": "Ecosystem",
+    "serviceCard": {
+      "challenge": "Business Challenge",
+      "outcomes": "Expected Outcomes",
+      "deliverables": "Deliverables"
+    },
+    "pillars": {
+      "01": {
+        "name": "Business Transformation",
+        "conviction": "Redesign how the business operates before introducing technology.",
+        "services": {
+          "s01-01": {
+            "name": "Agentic Readiness Assessment",
+            "challenge": "Leaders lack a clear picture of where autonomous AI agents can safely and profitably operate inside their organisation.",
+            "outcomes": [
+              "Ranked opportunity map across functions",
+              "Risk and dependency inventory",
+              "Executive-aligned agentic roadmap"
+            ],
+            "deliverables": [
+              "Readiness scorecard",
+              "90-day quick-win plan",
+              "Board-ready briefing deck"
+            ],
+            "tags": ["Python survey analysis", "ML opportunity scoring"]
+          },
+          "s01-02": {
+            "name": "Business Transformation Assessment",
+            "challenge": "Organisations face pressure to modernise but struggle to connect technology investments to measurable business outcomes.",
+            "outcomes": [
+              "Operating model gap analysis",
+              "Value-linked transformation priorities",
+              "Change impact baseline"
+            ],
+            "deliverables": [
+              "Current-state process maps",
+              "Business case with ROI model",
+              "Transformation roadmap"
+            ],
+            "tags": ["ML-driven cost-benefit modelling"]
+          },
+          "s01-03": {
+            "name": "AI Workforce Strategy",
+            "challenge": "Executives need a credible plan for integrating digital workers alongside their human workforce without disrupting culture or productivity.",
+            "outcomes": [
+              "Human-to-agent task allocation model",
+              "Upskilling and change programme design",
+              "KPIs for digital workforce performance"
+            ],
+            "deliverables": [
+              "Role taxonomy and agent blueprint",
+              "Adoption playbook",
+              "Workforce transition plan"
+            ],
+            "tags": ["ML workforce demand forecasting", "Python skills-gap analysis"]
+          },
+          "s01-04": {
+            "name": "Executive Advisory",
+            "challenge": "C-suite leaders need trusted, vendor-neutral guidance to navigate rapidly evolving AI capabilities and competitive dynamics.",
+            "outcomes": [
+              "Sharper AI investment decisions",
+              "Reduced programme risk",
+              "Board-level AI fluency"
+            ],
+            "deliverables": [
+              "Monthly advisory sessions",
+              "Horizon scanning reports",
+              "Decision frameworks and position papers"
+            ]
+          }
+        }
+      },
+      "02": {
+        "name": "Modern Work",
+        "conviction": "Enable people to collaborate, decide and execute faster.",
+        "services": {
+          "s02-01": {
+            "name": "Microsoft 365 Strategy",
+            "challenge": "Organisations have invested in Microsoft 365 but struggle to realise value beyond email and basic file storage.",
+            "outcomes": [
+              "Unified adoption strategy across M365 workloads",
+              "Measurable productivity improvements",
+              "AI-ready workplace foundation"
+            ],
+            "deliverables": [
+              "M365 maturity assessment",
+              "Adoption roadmap",
+              "Governance and licensing review"
+            ]
+          },
+          "s02-02": {
+            "name": "Copilot Readiness Programme",
+            "challenge": "Deploying Microsoft Copilot without preparing people, processes, content and governance leads to low adoption and wasted investment.",
+            "outcomes": [
+              "High Copilot adoption from day one",
+              "Governed use across functions",
+              "Measurable productivity lift"
+            ],
+            "deliverables": [
+              "Copilot readiness scorecard",
+              "Content and data preparation plan",
+              "Adoption and change programme"
+            ]
+          },
+          "s02-03": {
+            "name": "Teams & SharePoint Governance",
+            "challenge": "Ungoverned Teams and SharePoint environments create sprawl, duplication and security risk as organisations scale.",
+            "outcomes": [
+              "Controlled, compliant collaboration environment",
+              "Findable, trusted knowledge",
+              "Reduced duplication and cost"
+            ],
+            "deliverables": [
+              "Governance framework and policies",
+              "Site and team lifecycle management",
+              "Training and adoption programme"
+            ]
+          },
+          "s02-04": {
+            "name": "Knowledge Management",
+            "challenge": "Critical organisational knowledge is locked in email, in people's heads, or in unstructured content that AI cannot reliably use.",
+            "outcomes": [
+              "Structured, findable knowledge base",
+              "AI-ready content architecture",
+              "Reduced onboarding and support time"
+            ],
+            "deliverables": [
+              "Knowledge architecture design",
+              "Viva Topics or SharePoint implementation",
+              "Content curation playbook"
+            ]
+          }
+        }
+      },
+      "03": {
+        "name": "Data & Analytics",
+        "conviction": "Turn fragmented data into trusted intelligence.",
+        "services": {
+          "s03-01": {
+            "name": "Data Platform Readiness",
+            "challenge": "Fragmented, legacy data platforms block AI adoption and create bottlenecks that slow decision-making across the enterprise.",
+            "outcomes": [
+              "Unified, scalable data lakehouse architecture",
+              "Reliable pipelines feeding AI workloads",
+              "Reduced data engineering toil"
+            ],
+            "deliverables": [
+              "Platform architecture blueprint",
+              "Python-based ETL pipeline library",
+              "Migration runbook"
+            ],
+            "tags": ["Python / PySpark pipelines", "ML-ready feature store"]
+          },
+          "s03-02": {
+            "name": "Analytics Modernisation",
+            "challenge": "Dashboards report what happened — executives need forward-looking intelligence to act ahead of the curve.",
+            "outcomes": [
+              "Shift from descriptive to predictive analytics",
+              "Self-service insight across business units",
+              "Faster time-to-insight"
+            ],
+            "deliverables": [
+              "ML-powered forecasting models",
+              "Semantic layer and report catalogue",
+              "Analyst upskilling programme"
+            ],
+            "tags": ["Python (scikit-learn, statsmodels)", "Predictive & prescriptive ML"]
+          },
+          "s03-03": {
+            "name": "Data Governance",
+            "challenge": "Without clear data ownership and quality controls, AI systems inherit the errors and biases of their underlying data.",
+            "outcomes": [
+              "Trustworthy data across the enterprise",
+              "Regulatory compliance posture",
+              "Reduced data incidents and rework"
+            ],
+            "deliverables": [
+              "Data catalogue and lineage mapping",
+              "Automated quality checks (Python / Great Expectations)",
+              "Governance operating model"
+            ],
+            "tags": ["Python data quality automation", "ML anomaly detection on data quality"]
+          },
+          "s03-04": {
+            "name": "AI Data Foundations",
+            "challenge": "Most enterprise data is not in the shape or quality required to fuel production AI and LLM workloads.",
+            "outcomes": [
+              "Curated datasets ready for LLM fine-tuning and RAG",
+              "Vector store and embedding infrastructure",
+              "Reproducible ML experiment environment"
+            ],
+            "deliverables": [
+              "Feature engineering pipelines",
+              "Embedding and retrieval layer",
+              "MLflow experiment tracking setup"
+            ],
+            "tags": ["Python (LangChain, MLflow, HuggingFace)", "Feature engineering & embeddings"]
+          }
+        }
+      },
+      "04": {
+        "name": "Business Applications",
+        "conviction": "Connect CRM, ERP and operational workflows.",
+        "services": {
+          "s04-01": {
+            "name": "Dynamics 365 CRM Advisory",
+            "challenge": "CRM implementations often fail to reflect how the business actually sells, services or retains customers.",
+            "outcomes": [
+              "CRM aligned to customer journey reality",
+              "Higher adoption across sales and service teams",
+              "Cleaner data feeding AI and reporting"
+            ],
+            "deliverables": [
+              "Process and requirements review",
+              "Configured and tested CRM environment",
+              "Adoption and training programme"
+            ]
+          },
+          "s04-02": {
+            "name": "Business Central Optimisation",
+            "challenge": "Finance and operations teams work around Business Central rather than through it, creating manual workarounds and data gaps.",
+            "outcomes": [
+              "Reduced manual workarounds",
+              "Reliable financial and operational data",
+              "ERP positioned to support AI agents"
+            ],
+            "deliverables": [
+              "Process alignment review",
+              "Configuration and integration fixes",
+              "Reporting and automation improvements"
+            ]
+          },
+          "s04-03": {
+            "name": "Customer Journey Transformation",
+            "challenge": "Disconnected systems create fragmented customer experiences that damage retention and make AI-assisted service impossible.",
+            "outcomes": [
+              "End-to-end customer journey visibility",
+              "Consistent experience across touchpoints",
+              "AI-ready customer data model"
+            ],
+            "deliverables": [
+              "Journey mapping and gap analysis",
+              "Unified customer data architecture",
+              "Automation and agent integration plan"
+            ],
+            "tags": ["ML churn prediction"]
+          }
+        }
+      },
+      "05": {
+        "name": "Automation & Agentic AI",
+        "conviction": "Design digital workforces that accelerate execution.",
+        "services": {
+          "s05-01": {
+            "name": "Agent Factory",
+            "challenge": "Organisations want to deploy AI agents quickly but lack the reusable tooling and standards to do so at scale.",
+            "outcomes": [
+              "Reusable agent component library",
+              "Rapid agent provisioning in days not months",
+              "Consistent quality and safety baseline"
+            ],
+            "deliverables": [
+              "Python agent SDK and template repository",
+              "CI/CD pipeline for agent deployment",
+              "Developer enablement programme"
+            ],
+            "tags": ["Python (LangGraph, AutoGen, SK)", "LLM orchestration & routing"]
+          },
+          "s05-02": {
+            "name": "Multi-Agent Architectures",
+            "challenge": "Complex workflows require networks of specialised agents that collaborate, delegate and verify each other's outputs.",
+            "outcomes": [
+              "End-to-end automation of multi-step workflows",
+              "Robust error recovery and fault tolerance",
+              "Transparent audit trails across agent hops"
+            ],
+            "deliverables": [
+              "Multi-agent topology design",
+              "Python implementation (LangGraph / AutoGen)",
+              "Integration test suite and observability stack"
+            ],
+            "tags": ["Python (LangGraph, AutoGen)", "Reinforcement learning for routing"]
+          },
+          "s05-03": {
+            "name": "Intelligent Automation Programmes",
+            "challenge": "Traditional RPA programmes plateau once simple rules run out — intelligent automation adds judgement to exception-heavy processes.",
+            "outcomes": [
+              "Higher straight-through processing rates",
+              "Reduced exception handling cost",
+              "Automation that learns and adapts over time"
+            ],
+            "deliverables": [
+              "Process intelligence assessment",
+              "ML-enhanced automation workflows",
+              "Benefits realisation tracker"
+            ],
+            "tags": ["Python ML pipeline integration", "Classification & document understanding"]
+          },
+          "s05-04": {
+            "name": "Digital Workforce Enablement",
+            "challenge": "Deploying agents in isolation creates point solutions — scaling to a true digital workforce requires shared infrastructure and governance.",
+            "outcomes": [
+              "Coordinated fleet of agents operating end-to-end",
+              "Measurable capacity gains in target functions",
+              "Human-in-the-loop checkpoints enforced"
+            ],
+            "deliverables": [
+              "Digital workforce architecture",
+              "Agent orchestration layer (Python)",
+              "Operations runbook and SLAs"
+            ],
+            "tags": ["Python orchestration layer", "ML-based workload scheduling"]
+          },
+          "s05-05": {
+            "name": "AI Agent Design",
+            "challenge": "Without thoughtful design, AI agents fail to earn user trust, behave inconsistently, or optimise for the wrong outcomes.",
+            "outcomes": [
+              "Agents that are intuitive, reliable and safe",
+              "Clear scope, persona and escalation paths",
+              "High user adoption rates"
+            ],
+            "deliverables": [
+              "Agent design specification",
+              "Prompt library and evaluation harness",
+              "UX prototype and pilot results"
+            ],
+            "tags": ["Python eval frameworks (RAGAS, DeepEval)", "Prompt optimisation & A/B testing"]
+          }
+        }
+      },
+      "06": {
+        "name": "Governance & Quality",
+        "conviction": "Keep transformation secure, controlled and scalable.",
+        "services": {
+          "s06-01": {
+            "name": "Responsible AI Governance",
+            "challenge": "Boards and regulators demand evidence that AI systems are fair, transparent and safe — few organisations have the frameworks to prove it.",
+            "outcomes": [
+              "Auditable AI risk register",
+              "Bias detection and mitigation in place",
+              "Regulatory compliance posture (EU AI Act)"
+            ],
+            "deliverables": [
+              "Responsible AI policy and playbook",
+              "Python fairness evaluation toolkit",
+              "Model cards for all production models"
+            ],
+            "tags": ["Python (Fairlearn, InterpretML)", "Bias auditing & explainability"]
+          },
+          "s06-02": {
+            "name": "Quality Engineering",
+            "challenge": "AI systems require testing approaches beyond traditional QA — covering model behaviour, prompt robustness and integration reliability.",
+            "outcomes": [
+              "Confident deployment of AI changes",
+              "Reduced regression and hallucination rates",
+              "Automated quality gates in CI/CD"
+            ],
+            "deliverables": [
+              "AI-specific test strategy",
+              "Automated evaluation pipelines (pytest + LLM judges)",
+              "Quality dashboard and alerting"
+            ],
+            "tags": ["Python test automation (pytest, RAGAS)", "LLM-as-judge evaluation"]
+          },
+          "s06-03": {
+            "name": "Platform Governance",
+            "challenge": "As AI platforms grow, ungoverned sprawl leads to cost overruns, security gaps and inconsistent user experience.",
+            "outcomes": [
+              "Controlled, compliant platform usage",
+              "Cost visibility and optimisation",
+              "Consistent guardrails across all deployments"
+            ],
+            "deliverables": [
+              "Platform governance framework",
+              "Policy-as-code implementation",
+              "Usage reporting and cost dashboards"
+            ],
+            "tags": ["Python policy-as-code scripts", "ML anomaly detection on usage patterns"]
+          },
+          "s06-04": {
+            "name": "Transformation Advisory Retainer",
+            "challenge": "Sustaining transformation momentum requires ongoing expert capacity that most internal teams cannot maintain alone.",
+            "outcomes": [
+              "Continuous improvement embedded in operations",
+              "Rapid response to emerging AI developments",
+              "Alignment between AI and business strategy maintained"
+            ],
+            "deliverables": [
+              "Monthly health checks and model performance reviews",
+              "Quarterly strategic reviews",
+              "On-demand expert access"
+            ],
+            "tags": ["ML model drift monitoring", "Python monitoring dashboards"]
+          }
+        }
+      }
+    },
+    "engage": {
+      "eyebrow": "How to Engage",
+      "cards": {
+        "aiReadiness": {
+          "title": "AI Readiness Assessment",
+          "meta": "2–4 weeks",
+          "description": "Assess AI maturity, data exposure, governance gaps and build an executive roadmap."
+        },
+        "businessTransformation": {
+          "title": "Business Transformation Assessment",
+          "meta": "4–6 weeks",
+          "description": "Map process friction and design the target operating model with a value-linked roadmap."
+        },
+        "dataPlatform": {
+          "title": "Data Platform Readiness",
+          "meta": "2–4 weeks",
+          "description": "Evaluate Fabric, Snowflake, Databricks, analytics maturity and data governance posture."
+        },
+        "copilotEnablement": {
+          "title": "Copilot Enablement Programme",
+          "meta": "1–3 months",
+          "description": "Prepare people, processes, content and governance for Microsoft Copilot at scale."
+        },
+        "automationDiscovery": {
+          "title": "Automation Discovery",
+          "meta": "2–3 weeks",
+          "description": "Identify high-value automation opportunities and quantify the business case for action."
+        },
+        "fractionalArchitecture": {
+          "title": "Fractional Architecture Services",
+          "meta": "Ongoing",
+          "description": "Strategic advisory across business, data, applications, automation and AI."
+        }
+      },
+      "ctaLine": "Every assessment is designed to reveal a larger transformation roadmap.",
+      "ctaLink": "Start the Conversation →"
+    }
+  },
+  "Contact": {
+    "panel": {
+      "eyebrow": "Contact",
+      "title": "Start the conversation.",
+      "body": "Tell us what is on your mind. We will match you with the right person from our team and respond within one business day.",
+      "features": {
+        "responseTime": {
+          "title": "Response time",
+          "desc": "Within one business day"
+        },
+        "whoYouSpeak": {
+          "title": "Who you'll speak with",
+          "desc": "A senior practitioner, not a sales team"
+        },
+        "noCommitment": {
+          "title": "No commitment required",
+          "desc": "An initial conversation costs nothing"
+        }
+      }
+    },
+    "chat": {
+      "name": "NexIQ",
+      "activeNow": "Active now",
+      "placeholder": "Type your answer...",
+      "placeholderDone": "Conversation complete.",
+      "sendAria": "Send message",
+      "opening": "Thanks for reaching out. I'm NexIQ, OperonIQ's intake assistant - I'll ask you a few quick questions so the right person on our team is fully prepared when they follow up. To start: what brought you to OperonIQ today?",
+      "genericError": "Something went wrong - please try again.",
+      "networkError": "Something went wrong on my end - please try again or email us directly at hello@operoniq.com.",
+      "quickOpts": {
+        "area": [
+          "Process inefficiency",
+          "Data & AI readiness",
+          "Platform consolidation",
+          "Automation opportunity",
+          "A combination"
+        ],
+        "size": ["Under 500", "500-2,000", "2,000-5,000", "Over 5,000"],
+        "timeline": [
+          "Board AI agenda",
+          "Failed implementation",
+          "Digital transformation push",
+          "No specific trigger yet"
+        ]
+      }
+    }
+  },
+  "NexIQSystem": "You are NexIQ, the intake assistant for OperonIQ - a senior-led boutique consultancy specialising in business transformation, data, automation and agentic AI. Your only job is to gather initial context from a prospective client so that when a senior OperonIQ practitioner follows up, they are fully prepared.\n\nTone: direct, warm, professional. No filler. No corporate speak. No emojis. Sound like a senior consultant, not a chatbot. Never say \"Great!\" or \"Absolutely!\" or \"Of course!\". No hollow affirmations.\n\nRespond only in English, regardless of the language the visitor uses.\n\nYou have already introduced yourself and asked what brought them to OperonIQ. Now ask these questions one at a time in order:\n1. Which area of the business is most affected - process, data, technology, people, or a combination?\n2. Roughly how large is the organisation?\n3. Is there a specific timeline or trigger driving this?\n4. What does a successful outcome look like in the next 6-12 months?\n\nAfter the fourth answer: thank them briefly, confirm a senior OperonIQ team member will follow up within one business day, and ask for their name and email so we can route the conversation to the right person. Then close warmly and concisely - no more questions after that.\n\nHard rules:\n- One question per message only\n- Keep each message under 3 sentences\n- Acknowledge their answer briefly before asking the next - never repeat verbatim\n- Never offer advice, analysis or service descriptions\n- Extract the following from the conversation and include them as a JSON block at the very end of your final message (after you have collected name and email), on its own line, with no other text after it:\n  SUMMARY_JSON:{\"trigger\":\"...\",\"area\":\"...\",\"size\":\"...\",\"timeline\":\"...\",\"outcome\":\"...\",\"name\":\"...\",\"email\":\"...\"}"
+}

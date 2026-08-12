@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { useTranslations } from 'next-intl';
 
 type ChatMessage = {
   role: 'bot' | 'user';
@@ -20,46 +21,6 @@ type Summary = {
   outcome: string;
   name: string;
   email: string;
-};
-
-const OPENING =
-  "Thanks for reaching out. I'm NexIQ, OperonIQ's intake assistant - I'll ask you a few quick questions so the right person on our team is fully prepared when they follow up. To start: what brought you to OperonIQ today?";
-
-const SYSTEM = `You are NexIQ, the intake assistant for OperonIQ - a senior-led boutique consultancy specialising in business transformation, data, automation and agentic AI. Your only job is to gather initial context from a prospective client so that when a senior OperonIQ practitioner follows up, they are fully prepared.
-
-Tone: direct, warm, professional. No filler. No corporate speak. No emojis. Sound like a senior consultant, not a chatbot. Never say "Great!" or "Absolutely!" or "Of course!". No hollow affirmations.
-
-You have already introduced yourself and asked what brought them to OperonIQ. Now ask these questions one at a time in order:
-1. Which area of the business is most affected - process, data, technology, people, or a combination?
-2. Roughly how large is the organisation?
-3. Is there a specific timeline or trigger driving this?
-4. What does a successful outcome look like in the next 6-12 months?
-
-After the fourth answer: thank them briefly, confirm a senior OperonIQ team member will follow up within one business day, and ask for their name and email so we can route the conversation to the right person. Then close warmly and concisely - no more questions after that.
-
-Hard rules:
-- One question per message only
-- Keep each message under 3 sentences
-- Acknowledge their answer briefly before asking the next - never repeat verbatim
-- Never offer advice, analysis or service descriptions
-- Extract the following from the conversation and include them as a JSON block at the very end of your final message (after you have collected name and email), on its own line, with no other text after it:
-  SUMMARY_JSON:{"trigger":"...","area":"...","size":"...","timeline":"...","outcome":"...","name":"...","email":"..."}`;
-
-const QUICK_OPTS: Record<number, string[]> = {
-  1: [
-    'Process inefficiency',
-    'Data & AI readiness',
-    'Platform consolidation',
-    'Automation opportunity',
-    'A combination',
-  ],
-  2: ['Under 500', '500-2,000', '2,000-5,000', 'Over 5,000'],
-  3: [
-    'Board AI agenda',
-    'Failed implementation',
-    'Digital transformation push',
-    'No specific trigger yet',
-  ],
 };
 
 function HubIcon({ size = 20 }: { size?: number }) {
@@ -165,6 +126,15 @@ function SendIcon() {
 }
 
 export function NexIQ() {
+  const t = useTranslations();
+  const OPENING = t('Contact.chat.opening');
+  const SYSTEM = t('NexIQSystem');
+  const QUICK_OPTS: Record<number, string[]> = {
+    1: t.raw('Contact.chat.quickOpts.area') as string[],
+    2: t.raw('Contact.chat.quickOpts.size') as string[],
+    3: t.raw('Contact.chat.quickOpts.timeline') as string[],
+  };
+
   const [messages, setMessages] = useState<ChatMessage[]>([
     { role: 'bot', text: OPENING },
   ]);
@@ -208,9 +178,7 @@ export function NexIQ() {
         body: JSON.stringify({ messages: newHistory, system: SYSTEM }),
       });
       const data = await res.json();
-      const raw =
-        data.content?.[0]?.text ||
-        'Something went wrong - please try again.';
+      const raw = data.content?.[0]?.text || t('Contact.chat.genericError');
 
       let displayText = raw;
       const summaryPattern = /SUMMARY_JSON:(\{[\s\S]*?\})/;
@@ -243,7 +211,7 @@ export function NexIQ() {
         ...prev,
         {
           role: 'bot',
-          text: 'Something went wrong on my end - please try again or email us directly at hello@operoniq.com.',
+          text: t('Contact.chat.networkError'),
         },
       ]);
     } finally {
@@ -269,43 +237,29 @@ export function NexIQ() {
         <div className="flex flex-col justify-center gap-5 border-b border-white/10 bg-navy-950/70 p-7 sm:p-10 lg:border-b-0 lg:border-r lg:p-12">
           <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.24em] text-operon-green">
             <span className="h-px w-6 bg-operon-green" />
-            Contact
+            {t('Contact.panel.eyebrow')}
           </div>
 
           <div>
             <h1 className="text-3xl font-semibold leading-tight text-white sm:text-4xl">
-              Start the conversation.
+              {t('Contact.panel.title')}
             </h1>
             <p className="mt-5 max-w-md text-sm leading-7 text-slate-400">
-              Tell us what is on your mind. We will match you with the right
-              person from our team and respond within one business day.
+              {t('Contact.panel.body')}
             </p>
           </div>
 
           <div className="grid gap-4 pt-2">
-            {[
-              {
-                title: 'Response time',
-                desc: 'Within one business day',
-              },
-              {
-                title: "Who you'll speak with",
-                desc: 'A senior practitioner, not a sales team',
-              },
-              {
-                title: 'No commitment required',
-                desc: 'An initial conversation costs nothing',
-              },
-            ].map(({ title, desc }) => (
-              <div key={title} className="flex items-start gap-3">
+            {(['responseTime', 'whoYouSpeak', 'noCommitment'] as const).map((key) => (
+              <div key={key} className="flex items-start gap-3">
                 <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-operon-cyan/20 bg-navy-850">
                   <HubIcon size={16} />
                 </div>
                 <div className="text-sm leading-6 text-slate-400">
                   <strong className="block font-medium text-slate-200">
-                    {title}
+                    {t(`Contact.panel.features.${key}.title`)}
                   </strong>
-                  {desc}
+                  {t(`Contact.panel.features.${key}.desc`)}
                 </div>
               </div>
             ))}
@@ -318,10 +272,10 @@ export function NexIQ() {
               <HubIcon />
             </div>
             <div>
-              <div className="text-sm font-medium text-slate-200">NexIQ</div>
+              <div className="text-sm font-medium text-slate-200">{t('Contact.chat.name')}</div>
               <div className="mt-1 flex items-center gap-2 text-xs text-operon-green">
                 <span className="h-1.5 w-1.5 rounded-full bg-operon-green" />
-                Active now
+                {t('Contact.chat.activeNow')}
               </div>
             </div>
           </div>
@@ -404,7 +358,7 @@ export function NexIQ() {
                   void sendMessage(input);
                 }
               }}
-              placeholder={done ? 'Conversation complete.' : 'Type your answer...'}
+              placeholder={done ? t('Contact.chat.placeholderDone') : t('Contact.chat.placeholder')}
               disabled={loading || done}
               className="min-w-0 flex-1 rounded-md border border-white/10 bg-[#0F1C33] px-3.5 py-2.5 text-sm text-slate-200 outline-none transition placeholder:text-slate-600 focus:border-operon-cyan/60 focus:ring-2 focus:ring-operon-cyan/15 disabled:cursor-not-allowed disabled:opacity-60"
             />
@@ -413,7 +367,7 @@ export function NexIQ() {
               onClick={() => void sendMessage(input)}
               disabled={loading || done || !input.trim()}
               className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-[#4ECDA4] transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-35"
-              aria-label="Send message"
+              aria-label={t('Contact.chat.sendAria')}
             >
               <SendIcon />
             </button>

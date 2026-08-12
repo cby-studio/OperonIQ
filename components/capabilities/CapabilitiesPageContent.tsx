@@ -1,9 +1,10 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
+import { Link } from '@/i18n/navigation';
 
 const LOGO_MAP: Record<string, string> = {
   'Microsoft 365':    '/logos/microsoft-365.svg',
@@ -63,599 +64,103 @@ type PillarData = {
   services: ServiceData[];
 };
 
-type EngageCard = {
-  title: string;
-  meta: string;
-  description: string;
+// ─── Non-text configuration ───────────────────────────────────────────────────
+// Ecosystem chips are technology/brand names — not translated. Copy for pillar
+// names, convictions and services lives in messages/{locale}.json under "Capabilities".
+
+const PILLAR_IDS = ['01', '02', '03', '04', '05', '06'] as const;
+
+const PILLAR_SERVICE_IDS: Record<(typeof PILLAR_IDS)[number], string[]> = {
+  '01': ['s01-01', 's01-02', 's01-03', 's01-04'],
+  '02': ['s02-01', 's02-02', 's02-03', 's02-04'],
+  '03': ['s03-01', 's03-02', 's03-03', 's03-04'],
+  '04': ['s04-01', 's04-02', 's04-03'],
+  '05': ['s05-01', 's05-02', 's05-03', 's05-04', 's05-05'],
+  '06': ['s06-01', 's06-02', 's06-03', 's06-04'],
 };
 
-// ─── Pillar data ──────────────────────────────────────────────────────────────
+// Tag chip colour ('python' | 'ml'), positional — matches the order of the
+// translated "tags" string array for that service.
+const TAG_TYPES: Record<string, Array<'python' | 'ml'>> = {
+  's01-01': ['python', 'ml'],
+  's01-02': ['ml'],
+  's01-03': ['ml', 'python'],
+  's03-01': ['python', 'ml'],
+  's03-02': ['python', 'ml'],
+  's03-03': ['python', 'ml'],
+  's03-04': ['python', 'ml'],
+  's04-03': ['ml'],
+  's05-01': ['python', 'ml'],
+  's05-02': ['python', 'ml'],
+  's05-03': ['python', 'ml'],
+  's05-04': ['python', 'ml'],
+  's05-05': ['python', 'ml'],
+  's06-01': ['python', 'ml'],
+  's06-02': ['python', 'ml'],
+  's06-03': ['python', 'ml'],
+  's06-04': ['ml', 'python'],
+};
 
-const PILLARS: PillarData[] = [
-  {
-    id: '01',
-    number: '01',
-    name: 'Business Transformation',
-    conviction: 'Redesign how the business operates before introducing technology.',
-    ecosystem: [
-      { label: 'Microsoft 365', type: 'neutral' },
-      { label: 'Power Platform', type: 'neutral' },
-      { label: 'Azure AI', type: 'neutral' },
-      { label: 'Snowflake', type: 'neutral' },
-      { label: 'Databricks', type: 'neutral' },
-    ],
-    services: [
-      {
-        id: 's01-01',
-        name: 'Agentic Readiness Assessment',
-        challenge:
-          'Leaders lack a clear picture of where autonomous AI agents can safely and profitably operate inside their organisation.',
-        outcomes: [
-          'Ranked opportunity map across functions',
-          'Risk and dependency inventory',
-          'Executive-aligned agentic roadmap',
-        ],
-        deliverables: [
-          'Readiness scorecard',
-          '90-day quick-win plan',
-          'Board-ready briefing deck',
-        ],
-        tags: [
-          { label: 'Python survey analysis', type: 'python' },
-          { label: 'ML opportunity scoring', type: 'ml' },
-        ],
-      },
-      {
-        id: 's01-02',
-        name: 'Business Transformation Assessment',
-        challenge:
-          'Organisations face pressure to modernise but struggle to connect technology investments to measurable business outcomes.',
-        outcomes: [
-          'Operating model gap analysis',
-          'Value-linked transformation priorities',
-          'Change impact baseline',
-        ],
-        deliverables: [
-          'Current-state process maps',
-          'Business case with ROI model',
-          'Transformation roadmap',
-        ],
-        tags: [{ label: 'ML-driven cost-benefit modelling', type: 'ml' }],
-      },
-      {
-        id: 's01-03',
-        name: 'AI Workforce Strategy',
-        challenge:
-          'Executives need a credible plan for integrating digital workers alongside their human workforce without disrupting culture or productivity.',
-        outcomes: [
-          'Human-to-agent task allocation model',
-          'Upskilling and change programme design',
-          'KPIs for digital workforce performance',
-        ],
-        deliverables: [
-          'Role taxonomy and agent blueprint',
-          'Adoption playbook',
-          'Workforce transition plan',
-        ],
-        tags: [
-          { label: 'ML workforce demand forecasting', type: 'ml' },
-          { label: 'Python skills-gap analysis', type: 'python' },
-        ],
-      },
-      {
-        id: 's01-04',
-        name: 'Executive Advisory',
-        challenge:
-          'C-suite leaders need trusted, vendor-neutral guidance to navigate rapidly evolving AI capabilities and competitive dynamics.',
-        outcomes: [
-          'Sharper AI investment decisions',
-          'Reduced programme risk',
-          'Board-level AI fluency',
-        ],
-        deliverables: [
-          'Monthly advisory sessions',
-          'Horizon scanning reports',
-          'Decision frameworks and position papers',
-        ],
-      },
-    ],
-  },
-  {
-    id: '02',
-    number: '02',
-    name: 'Modern Work',
-    conviction: 'Enable people to collaborate, decide and execute faster.',
-    ecosystem: [
-      { label: 'Microsoft 365', type: 'neutral' },
-      { label: 'Teams', type: 'neutral' },
-      { label: 'SharePoint', type: 'neutral' },
-      { label: 'Viva', type: 'neutral' },
-      { label: 'Copilot', type: 'neutral' },
-      { label: 'Power Platform', type: 'neutral' },
-    ],
-    services: [
-      {
-        id: 's02-01',
-        name: 'Microsoft 365 Strategy',
-        challenge:
-          'Organisations have invested in Microsoft 365 but struggle to realise value beyond email and basic file storage.',
-        outcomes: [
-          'Unified adoption strategy across M365 workloads',
-          'Measurable productivity improvements',
-          'AI-ready workplace foundation',
-        ],
-        deliverables: [
-          'M365 maturity assessment',
-          'Adoption roadmap',
-          'Governance and licensing review',
-        ],
-      },
-      {
-        id: 's02-02',
-        name: 'Copilot Readiness Programme',
-        challenge:
-          'Deploying Microsoft Copilot without preparing people, processes, content and governance leads to low adoption and wasted investment.',
-        outcomes: [
-          'High Copilot adoption from day one',
-          'Governed use across functions',
-          'Measurable productivity lift',
-        ],
-        deliverables: [
-          'Copilot readiness scorecard',
-          'Content and data preparation plan',
-          'Adoption and change programme',
-        ],
-      },
-      {
-        id: 's02-03',
-        name: 'Teams & SharePoint Governance',
-        challenge:
-          'Ungoverned Teams and SharePoint environments create sprawl, duplication and security risk as organisations scale.',
-        outcomes: [
-          'Controlled, compliant collaboration environment',
-          'Findable, trusted knowledge',
-          'Reduced duplication and cost',
-        ],
-        deliverables: [
-          'Governance framework and policies',
-          'Site and team lifecycle management',
-          'Training and adoption programme',
-        ],
-      },
-      {
-        id: 's02-04',
-        name: 'Knowledge Management',
-        challenge:
-          "Critical organisational knowledge is locked in email, in people's heads, or in unstructured content that AI cannot reliably use.",
-        outcomes: [
-          'Structured, findable knowledge base',
-          'AI-ready content architecture',
-          'Reduced onboarding and support time',
-        ],
-        deliverables: [
-          'Knowledge architecture design',
-          'Viva Topics or SharePoint implementation',
-          'Content curation playbook',
-        ],
-      },
-    ],
-  },
-  {
-    id: '03',
-    number: '03',
-    name: 'Data & Analytics',
-    conviction: 'Turn fragmented data into trusted intelligence.',
-    ecosystem: [
-      { label: 'Microsoft Fabric', type: 'neutral' },
-      { label: 'Snowflake', type: 'neutral' },
-      { label: 'Databricks', type: 'neutral' },
-      { label: 'Power BI', type: 'neutral' },
-      { label: 'Azure Data Services', type: 'neutral' },
-      { label: 'Python / PySpark', type: 'python' },
-      { label: 'ML & MLflow', type: 'ml' },
-    ],
-    services: [
-      {
-        id: 's03-01',
-        name: 'Data Platform Readiness',
-        challenge:
-          'Fragmented, legacy data platforms block AI adoption and create bottlenecks that slow decision-making across the enterprise.',
-        outcomes: [
-          'Unified, scalable data lakehouse architecture',
-          'Reliable pipelines feeding AI workloads',
-          'Reduced data engineering toil',
-        ],
-        deliverables: [
-          'Platform architecture blueprint',
-          'Python-based ETL pipeline library',
-          'Migration runbook',
-        ],
-        tags: [
-          { label: 'Python / PySpark pipelines', type: 'python' },
-          { label: 'ML-ready feature store', type: 'ml' },
-        ],
-      },
-      {
-        id: 's03-02',
-        name: 'Analytics Modernisation',
-        challenge:
-          'Dashboards report what happened — executives need forward-looking intelligence to act ahead of the curve.',
-        outcomes: [
-          'Shift from descriptive to predictive analytics',
-          'Self-service insight across business units',
-          'Faster time-to-insight',
-        ],
-        deliverables: [
-          'ML-powered forecasting models',
-          'Semantic layer and report catalogue',
-          'Analyst upskilling programme',
-        ],
-        tags: [
-          { label: 'Python (scikit-learn, statsmodels)', type: 'python' },
-          { label: 'Predictive & prescriptive ML', type: 'ml' },
-        ],
-      },
-      {
-        id: 's03-03',
-        name: 'Data Governance',
-        challenge:
-          'Without clear data ownership and quality controls, AI systems inherit the errors and biases of their underlying data.',
-        outcomes: [
-          'Trustworthy data across the enterprise',
-          'Regulatory compliance posture',
-          'Reduced data incidents and rework',
-        ],
-        deliverables: [
-          'Data catalogue and lineage mapping',
-          'Automated quality checks (Python / Great Expectations)',
-          'Governance operating model',
-        ],
-        tags: [
-          { label: 'Python data quality automation', type: 'python' },
-          { label: 'ML anomaly detection on data quality', type: 'ml' },
-        ],
-      },
-      {
-        id: 's03-04',
-        name: 'AI Data Foundations',
-        challenge:
-          'Most enterprise data is not in the shape or quality required to fuel production AI and LLM workloads.',
-        outcomes: [
-          'Curated datasets ready for LLM fine-tuning and RAG',
-          'Vector store and embedding infrastructure',
-          'Reproducible ML experiment environment',
-        ],
-        deliverables: [
-          'Feature engineering pipelines',
-          'Embedding and retrieval layer',
-          'MLflow experiment tracking setup',
-        ],
-        tags: [
-          { label: 'Python (LangChain, MLflow, HuggingFace)', type: 'python' },
-          { label: 'Feature engineering & embeddings', type: 'ml' },
-        ],
-      },
-    ],
-  },
-  {
-    id: '04',
-    number: '04',
-    name: 'Business Applications',
-    conviction: 'Connect CRM, ERP and operational workflows.',
-    ecosystem: [
-      { label: 'Dynamics 365', type: 'neutral' },
-      { label: 'Business Central', type: 'neutral' },
-      { label: 'Power Platform', type: 'neutral' },
-      { label: 'Power Automate', type: 'neutral' },
-      { label: 'Copilot Studio', type: 'neutral' },
-    ],
-    services: [
-      {
-        id: 's04-01',
-        name: 'Dynamics 365 CRM Advisory',
-        challenge:
-          'CRM implementations often fail to reflect how the business actually sells, services or retains customers.',
-        outcomes: [
-          'CRM aligned to customer journey reality',
-          'Higher adoption across sales and service teams',
-          'Cleaner data feeding AI and reporting',
-        ],
-        deliverables: [
-          'Process and requirements review',
-          'Configured and tested CRM environment',
-          'Adoption and training programme',
-        ],
-      },
-      {
-        id: 's04-02',
-        name: 'Business Central Optimisation',
-        challenge:
-          'Finance and operations teams work around Business Central rather than through it, creating manual workarounds and data gaps.',
-        outcomes: [
-          'Reduced manual workarounds',
-          'Reliable financial and operational data',
-          'ERP positioned to support AI agents',
-        ],
-        deliverables: [
-          'Process alignment review',
-          'Configuration and integration fixes',
-          'Reporting and automation improvements',
-        ],
-      },
-      {
-        id: 's04-03',
-        name: 'Customer Journey Transformation',
-        challenge:
-          'Disconnected systems create fragmented customer experiences that damage retention and make AI-assisted service impossible.',
-        outcomes: [
-          'End-to-end customer journey visibility',
-          'Consistent experience across touchpoints',
-          'AI-ready customer data model',
-        ],
-        deliverables: [
-          'Journey mapping and gap analysis',
-          'Unified customer data architecture',
-          'Automation and agent integration plan',
-        ],
-        tags: [{ label: 'ML churn prediction', type: 'ml' }],
-      },
-    ],
-  },
-  {
-    id: '05',
-    number: '05',
-    name: 'Automation & Agentic AI',
-    conviction: 'Design digital workforces that accelerate execution.',
-    ecosystem: [
-      { label: 'Copilot Studio', type: 'neutral' },
-      { label: 'Azure OpenAI', type: 'neutral' },
-      { label: 'Azure AI Foundry', type: 'neutral' },
-      { label: 'Power Automate', type: 'neutral' },
-      { label: 'Logic Apps', type: 'neutral' },
-      { label: 'Semantic Kernel', type: 'neutral' },
-      { label: 'Python / LangGraph', type: 'python' },
-      { label: 'LLM orchestration', type: 'ml' },
-    ],
-    services: [
-      {
-        id: 's05-01',
-        name: 'Agent Factory',
-        challenge:
-          'Organisations want to deploy AI agents quickly but lack the reusable tooling and standards to do so at scale.',
-        outcomes: [
-          'Reusable agent component library',
-          'Rapid agent provisioning in days not months',
-          'Consistent quality and safety baseline',
-        ],
-        deliverables: [
-          'Python agent SDK and template repository',
-          'CI/CD pipeline for agent deployment',
-          'Developer enablement programme',
-        ],
-        tags: [
-          { label: 'Python (LangGraph, AutoGen, SK)', type: 'python' },
-          { label: 'LLM orchestration & routing', type: 'ml' },
-        ],
-      },
-      {
-        id: 's05-02',
-        name: 'Multi-Agent Architectures',
-        challenge:
-          "Complex workflows require networks of specialised agents that collaborate, delegate and verify each other's outputs.",
-        outcomes: [
-          'End-to-end automation of multi-step workflows',
-          'Robust error recovery and fault tolerance',
-          'Transparent audit trails across agent hops',
-        ],
-        deliverables: [
-          'Multi-agent topology design',
-          'Python implementation (LangGraph / AutoGen)',
-          'Integration test suite and observability stack',
-        ],
-        tags: [
-          { label: 'Python (LangGraph, AutoGen)', type: 'python' },
-          { label: 'Reinforcement learning for routing', type: 'ml' },
-        ],
-      },
-      {
-        id: 's05-03',
-        name: 'Intelligent Automation Programmes',
-        challenge:
-          'Traditional RPA programmes plateau once simple rules run out — intelligent automation adds judgement to exception-heavy processes.',
-        outcomes: [
-          'Higher straight-through processing rates',
-          'Reduced exception handling cost',
-          'Automation that learns and adapts over time',
-        ],
-        deliverables: [
-          'Process intelligence assessment',
-          'ML-enhanced automation workflows',
-          'Benefits realisation tracker',
-        ],
-        tags: [
-          { label: 'Python ML pipeline integration', type: 'python' },
-          { label: 'Classification & document understanding', type: 'ml' },
-        ],
-      },
-      {
-        id: 's05-04',
-        name: 'Digital Workforce Enablement',
-        challenge:
-          'Deploying agents in isolation creates point solutions — scaling to a true digital workforce requires shared infrastructure and governance.',
-        outcomes: [
-          'Coordinated fleet of agents operating end-to-end',
-          'Measurable capacity gains in target functions',
-          'Human-in-the-loop checkpoints enforced',
-        ],
-        deliverables: [
-          'Digital workforce architecture',
-          'Agent orchestration layer (Python)',
-          'Operations runbook and SLAs',
-        ],
-        tags: [
-          { label: 'Python orchestration layer', type: 'python' },
-          { label: 'ML-based workload scheduling', type: 'ml' },
-        ],
-      },
-      {
-        id: 's05-05',
-        name: 'AI Agent Design',
-        challenge:
-          'Without thoughtful design, AI agents fail to earn user trust, behave inconsistently, or optimise for the wrong outcomes.',
-        outcomes: [
-          'Agents that are intuitive, reliable and safe',
-          'Clear scope, persona and escalation paths',
-          'High user adoption rates',
-        ],
-        deliverables: [
-          'Agent design specification',
-          'Prompt library and evaluation harness',
-          'UX prototype and pilot results',
-        ],
-        tags: [
-          { label: 'Python eval frameworks (RAGAS, DeepEval)', type: 'python' },
-          { label: 'Prompt optimisation & A/B testing', type: 'ml' },
-        ],
-      },
-    ],
-  },
-  {
-    id: '06',
-    number: '06',
-    name: 'Governance & Quality',
-    conviction: 'Keep transformation secure, controlled and scalable.',
-    ecosystem: [
-      { label: 'Microsoft Purview', type: 'neutral' },
-      { label: 'Compliance Manager', type: 'neutral' },
-      { label: 'Microsoft Security', type: 'neutral' },
-      { label: 'Power Platform Governance', type: 'neutral' },
-      { label: 'Python monitoring', type: 'python' },
-      { label: 'ML drift detection', type: 'ml' },
-    ],
-    services: [
-      {
-        id: 's06-01',
-        name: 'Responsible AI Governance',
-        challenge:
-          'Boards and regulators demand evidence that AI systems are fair, transparent and safe — few organisations have the frameworks to prove it.',
-        outcomes: [
-          'Auditable AI risk register',
-          'Bias detection and mitigation in place',
-          'Regulatory compliance posture (EU AI Act)',
-        ],
-        deliverables: [
-          'Responsible AI policy and playbook',
-          'Python fairness evaluation toolkit',
-          'Model cards for all production models',
-        ],
-        tags: [
-          { label: 'Python (Fairlearn, InterpretML)', type: 'python' },
-          { label: 'Bias auditing & explainability', type: 'ml' },
-        ],
-      },
-      {
-        id: 's06-02',
-        name: 'Quality Engineering',
-        challenge:
-          'AI systems require testing approaches beyond traditional QA — covering model behaviour, prompt robustness and integration reliability.',
-        outcomes: [
-          'Confident deployment of AI changes',
-          'Reduced regression and hallucination rates',
-          'Automated quality gates in CI/CD',
-        ],
-        deliverables: [
-          'AI-specific test strategy',
-          'Automated evaluation pipelines (pytest + LLM judges)',
-          'Quality dashboard and alerting',
-        ],
-        tags: [
-          { label: 'Python test automation (pytest, RAGAS)', type: 'python' },
-          { label: 'LLM-as-judge evaluation', type: 'ml' },
-        ],
-      },
-      {
-        id: 's06-03',
-        name: 'Platform Governance',
-        challenge:
-          'As AI platforms grow, ungoverned sprawl leads to cost overruns, security gaps and inconsistent user experience.',
-        outcomes: [
-          'Controlled, compliant platform usage',
-          'Cost visibility and optimisation',
-          'Consistent guardrails across all deployments',
-        ],
-        deliverables: [
-          'Platform governance framework',
-          'Policy-as-code implementation',
-          'Usage reporting and cost dashboards',
-        ],
-        tags: [
-          { label: 'Python policy-as-code scripts', type: 'python' },
-          { label: 'ML anomaly detection on usage patterns', type: 'ml' },
-        ],
-      },
-      {
-        id: 's06-04',
-        name: 'Transformation Advisory Retainer',
-        challenge:
-          'Sustaining transformation momentum requires ongoing expert capacity that most internal teams cannot maintain alone.',
-        outcomes: [
-          'Continuous improvement embedded in operations',
-          'Rapid response to emerging AI developments',
-          'Alignment between AI and business strategy maintained',
-        ],
-        deliverables: [
-          'Monthly health checks and model performance reviews',
-          'Quarterly strategic reviews',
-          'On-demand expert access',
-        ],
-        tags: [
-          { label: 'ML model drift monitoring', type: 'ml' },
-          { label: 'Python monitoring dashboards', type: 'python' },
-        ],
-      },
-    ],
-  },
-];
+const PILLAR_ECOSYSTEM: Record<(typeof PILLAR_IDS)[number], EcosystemChip[]> = {
+  '01': [
+    { label: 'Microsoft 365', type: 'neutral' },
+    { label: 'Power Platform', type: 'neutral' },
+    { label: 'Azure AI', type: 'neutral' },
+    { label: 'Snowflake', type: 'neutral' },
+    { label: 'Databricks', type: 'neutral' },
+  ],
+  '02': [
+    { label: 'Microsoft 365', type: 'neutral' },
+    { label: 'Teams', type: 'neutral' },
+    { label: 'SharePoint', type: 'neutral' },
+    { label: 'Viva', type: 'neutral' },
+    { label: 'Copilot', type: 'neutral' },
+    { label: 'Power Platform', type: 'neutral' },
+  ],
+  '03': [
+    { label: 'Microsoft Fabric', type: 'neutral' },
+    { label: 'Snowflake', type: 'neutral' },
+    { label: 'Databricks', type: 'neutral' },
+    { label: 'Power BI', type: 'neutral' },
+    { label: 'Azure Data Services', type: 'neutral' },
+    { label: 'Python / PySpark', type: 'python' },
+    { label: 'ML & MLflow', type: 'ml' },
+  ],
+  '04': [
+    { label: 'Dynamics 365', type: 'neutral' },
+    { label: 'Business Central', type: 'neutral' },
+    { label: 'Power Platform', type: 'neutral' },
+    { label: 'Power Automate', type: 'neutral' },
+    { label: 'Copilot Studio', type: 'neutral' },
+  ],
+  '05': [
+    { label: 'Copilot Studio', type: 'neutral' },
+    { label: 'Azure OpenAI', type: 'neutral' },
+    { label: 'Azure AI Foundry', type: 'neutral' },
+    { label: 'Power Automate', type: 'neutral' },
+    { label: 'Logic Apps', type: 'neutral' },
+    { label: 'Semantic Kernel', type: 'neutral' },
+    { label: 'Python / LangGraph', type: 'python' },
+    { label: 'LLM orchestration', type: 'ml' },
+  ],
+  '06': [
+    { label: 'Microsoft Purview', type: 'neutral' },
+    { label: 'Compliance Manager', type: 'neutral' },
+    { label: 'Microsoft Security', type: 'neutral' },
+    { label: 'Power Platform Governance', type: 'neutral' },
+    { label: 'Python monitoring', type: 'python' },
+    { label: 'ML drift detection', type: 'ml' },
+  ],
+};
 
-// ─── How to Engage data ───────────────────────────────────────────────────────
-
-const ENGAGE_CARDS: EngageCard[] = [
-  {
-    title: 'AI Readiness Assessment',
-    meta: '2–4 weeks',
-    description:
-      'Assess AI maturity, data exposure, governance gaps and build an executive roadmap.',
-  },
-  {
-    title: 'Business Transformation Assessment',
-    meta: '4–6 weeks',
-    description:
-      'Map process friction and design the target operating model with a value-linked roadmap.',
-  },
-  {
-    title: 'Data Platform Readiness',
-    meta: '2–4 weeks',
-    description:
-      'Evaluate Fabric, Snowflake, Databricks, analytics maturity and data governance posture.',
-  },
-  {
-    title: 'Copilot Enablement Programme',
-    meta: '1–3 months',
-    description:
-      'Prepare people, processes, content and governance for Microsoft Copilot at scale.',
-  },
-  {
-    title: 'Automation Discovery',
-    meta: '2–3 weeks',
-    description:
-      'Identify high-value automation opportunities and quantify the business case for action.',
-  },
-  {
-    title: 'Fractional Architecture Services',
-    meta: 'Ongoing',
-    description: 'Strategic advisory across business, data, applications, automation and AI.',
-  },
-];
+const ENGAGE_CARD_IDS = [
+  'aiReadiness',
+  'businessTransformation',
+  'dataPlatform',
+  'copilotEnablement',
+  'automationDiscovery',
+  'fractionalArchitecture',
+] as const;
 
 // ─── Chip components ──────────────────────────────────────────────────────────
 
@@ -730,6 +235,7 @@ function ServiceCard({
   isOpen: boolean;
   onToggle: () => void;
 }) {
+  const t = useTranslations('Capabilities.serviceCard');
   const [hovered, setHovered] = useState(false);
   const borderColor = isOpen
     ? 'rgba(32,197,232,0.38)'
@@ -776,7 +282,7 @@ function ServiceCard({
               className="mb-1.5 text-operon-cyan"
               style={{ fontSize: 10, letterSpacing: '0.13em', textTransform: 'uppercase', fontWeight: 600, opacity: 0.75 }}
             >
-              Business Challenge
+              {t('challenge')}
             </p>
             <p className="text-slate-300" style={{ fontSize: 12, lineHeight: 1.65 }}>
               {service.challenge}
@@ -789,7 +295,7 @@ function ServiceCard({
               className="mb-1.5 text-operon-blue"
               style={{ fontSize: 10, letterSpacing: '0.13em', textTransform: 'uppercase', fontWeight: 600, opacity: 0.8 }}
             >
-              Expected Outcomes
+              {t('outcomes')}
             </p>
             <ul className="space-y-1.5">
               {service.outcomes.map((o) => (
@@ -807,7 +313,7 @@ function ServiceCard({
               className="mb-1.5 text-operon-green"
               style={{ fontSize: 10, letterSpacing: '0.13em', textTransform: 'uppercase', fontWeight: 600, opacity: 0.8 }}
             >
-              Deliverables
+              {t('deliverables')}
             </p>
             <ul className="space-y-1.5">
               {service.deliverables.map((d) => (
@@ -836,6 +342,7 @@ function ServiceCard({
 // ─── PillarSection ────────────────────────────────────────────────────────────
 
 function PillarSection({ pillar }: { pillar: PillarData }) {
+  const t = useTranslations('Capabilities');
   const [openCards, setOpenCards] = useState<Set<string>>(new Set());
 
   function toggle(id: string) {
@@ -866,7 +373,7 @@ function PillarSection({ pillar }: { pillar: PillarData }) {
           className="mb-2.5 text-operon-cyan"
           style={{ fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', fontWeight: 600, opacity: 0.7 }}
         >
-          Ecosystem
+          {t('ecosystemLabel')}
         </p>
         <div className="flex flex-wrap gap-2">
           {pillar.ecosystem.map((chip) => (
@@ -899,9 +406,40 @@ function PillarSection({ pillar }: { pillar: PillarData }) {
 // ─── Main export ──────────────────────────────────────────────────────────────
 
 export function CapabilitiesPageContent() {
-  const [activeTab, setActiveTab] = useState('01');
+  const t = useTranslations('Capabilities');
+  const [activeTab, setActiveTab] = useState<(typeof PILLAR_IDS)[number]>('01');
 
-  const activePillar = PILLARS.find((p) => p.id === activeTab)!;
+  const pillars: PillarData[] = PILLAR_IDS.map((id) => ({
+    id,
+    number: id,
+    name: t(`pillars.${id}.name`),
+    conviction: t(`pillars.${id}.conviction`),
+    ecosystem: PILLAR_ECOSYSTEM[id],
+    services: PILLAR_SERVICE_IDS[id].map((sid) => {
+      const hasTags = t.has(`pillars.${id}.services.${sid}.tags`);
+      const tagLabels = hasTags ? (t.raw(`pillars.${id}.services.${sid}.tags`) as string[]) : [];
+      const tagTypes = TAG_TYPES[sid] ?? [];
+
+      return {
+        id: sid,
+        name: t(`pillars.${id}.services.${sid}.name`),
+        challenge: t(`pillars.${id}.services.${sid}.challenge`),
+        outcomes: t.raw(`pillars.${id}.services.${sid}.outcomes`) as string[],
+        deliverables: t.raw(`pillars.${id}.services.${sid}.deliverables`) as string[],
+        tags: hasTags
+          ? tagLabels.map((label, i) => ({ label, type: tagTypes[i] ?? 'python' }))
+          : undefined,
+      };
+    }),
+  }));
+
+  const activePillar = pillars.find((p) => p.id === activeTab)!;
+  const engageCards = ENGAGE_CARD_IDS.map((id) => ({
+    id,
+    title: t(`engage.cards.${id}.title`),
+    meta: t(`engage.cards.${id}.meta`),
+    description: t(`engage.cards.${id}.description`),
+  }));
 
   return (
     <>
@@ -917,7 +455,7 @@ export function CapabilitiesPageContent() {
               className="text-operon-cyan"
               style={{ fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 600 }}
             >
-              Capabilities
+              {t('hero.eyebrow')}
             </p>
           </div>
 
@@ -925,11 +463,10 @@ export function CapabilitiesPageContent() {
             className="mt-5 text-white"
             style={{ fontSize: 'clamp(1.9rem, 3.8vw, 2.75rem)', fontWeight: 500, lineHeight: 1.15 }}
           >
-            Six capabilities. One transformation engine.
+            {t('hero.title')}
           </h1>
           <p className="mt-4 text-slate-400" style={{ fontSize: 16, lineHeight: 1.7, maxWidth: 560 }}>
-            Each pillar addresses a distinct layer of the operating model. Together they form the
-            integrated capability that makes agentic transformation possible.
+            {t('hero.description')}
           </p>
         </div>
       </section>
@@ -941,12 +478,12 @@ export function CapabilitiesPageContent() {
       >
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div className="flex overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-            {PILLARS.map((p) => {
+            {pillars.map((p) => {
               const isActive = p.id === activeTab;
               return (
                 <button
                   key={p.id}
-                  onClick={() => setActiveTab(p.id)}
+                  onClick={() => setActiveTab(p.id as (typeof PILLAR_IDS)[number])}
                   className="flex shrink-0 flex-col items-center gap-0.5 px-3 py-3 text-center transition-colors duration-150 sm:flex-1 sm:px-1"
                   style={{
                     minWidth: 80,
@@ -987,15 +524,15 @@ export function CapabilitiesPageContent() {
               className="text-operon-cyan"
               style={{ fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 600 }}
             >
-              How to Engage
+              {t('engage.eyebrow')}
             </p>
           </div>
 
           {/* 3×2 grid */}
           <div className="grid grid-cols-1 gap-[10px] sm:grid-cols-2 lg:grid-cols-3">
-            {ENGAGE_CARDS.map((card) => (
+            {engageCards.map((card) => (
               <div
-                key={card.title}
+                key={card.id}
                 className="bg-navy-950"
                 style={{
                   border: '0.5px solid rgba(255,255,255,0.07)',
@@ -1018,12 +555,12 @@ export function CapabilitiesPageContent() {
 
           {/* CTA line */}
           <p className="mt-6 text-center text-slate-400" style={{ fontSize: 13 }}>
-            Every assessment is designed to reveal a larger transformation roadmap.{' '}
+            {t('engage.ctaLine')}{' '}
             <Link
               href="/contact"
               className="text-operon-cyan underline-offset-2 transition-colors duration-150 hover:text-white"
             >
-              Start the Conversation →
+              {t('engage.ctaLink')}
             </Link>
           </p>
         </div>

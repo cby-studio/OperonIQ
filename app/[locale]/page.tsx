@@ -1,3 +1,4 @@
+import { setRequestLocale } from 'next-intl/server';
 import { CapabilitiesSection } from '@/components/home/CapabilitiesSection';
 import { FinalCTA } from '@/components/home/FinalCTA';
 import { GradientSeparator } from '@/components/home/GradientSeparator';
@@ -7,7 +8,14 @@ import { ProblemSection } from '@/components/home/ProblemSection';
 import { SiteFrame } from '@/components/home/SiteFrame';
 import { TargetAudienceSection } from '@/components/home/TargetAudienceSection';
 
-export default function Home() {
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export default async function Home({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <SiteFrame>
       <HeroSection />

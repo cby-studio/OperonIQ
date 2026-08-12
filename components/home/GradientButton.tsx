@@ -1,5 +1,6 @@
 import { ArrowRight, ChevronRight } from 'lucide-react';
 import type { ReactNode } from 'react';
+import { Link } from '@/i18n/navigation';
 
 type GradientButtonVariant = 'primary' | 'secondary' | 'light' | 'glass';
 type GradientButtonSize = 'default' | 'compact';
@@ -39,7 +40,7 @@ export function GradientButton({
   const Icon = icon === 'chevron' ? ChevronRight : ArrowRight;
 
   return (
-    <a
+    <Link
       href={href}
       className={`group inline-flex items-center justify-center gap-3 rounded-sm text-sm transition duration-300 hover:-translate-y-0.5 ${sizeClasses[size]} ${variantClasses[variant]} ${className}`}
     >
@@ -48,6 +49,6 @@ export function GradientButton({
         className="h-4 w-4 transition duration-300 group-hover:translate-x-1"
         aria-hidden="true"
       />
-    </a>
+    </Link>
   );
 }

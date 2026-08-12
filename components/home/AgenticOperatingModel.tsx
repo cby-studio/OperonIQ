@@ -1,4 +1,8 @@
+import { useTranslations } from 'next-intl';
+
 export function AgenticOperatingModel() {
+  const t = useTranslations('Home.Diagram');
+
   return (
     <div className="flex h-full flex-col">
       {/* Diagram header */}
@@ -13,7 +17,7 @@ export function AgenticOperatingModel() {
               fontWeight: 600,
             }}
           >
-            Agentic Operating Model
+            {t('eyebrow')}
           </p>
           <p
             style={{
@@ -23,7 +27,7 @@ export function AgenticOperatingModel() {
               marginTop: '5px',
             }}
           >
-            People, platforms and digital workforces connected by governance.
+            {t('description')}
           </p>
         </div>
         <span
@@ -39,7 +43,7 @@ export function AgenticOperatingModel() {
             flexShrink: 0,
           }}
         >
-          Enterprise Layer
+          {t('badge')}
         </span>
       </div>
 
@@ -49,7 +53,7 @@ export function AgenticOperatingModel() {
           viewBox="0 0 340 430"
           width="100%"
           role="img"
-          aria-label="Agentic Operating Model — seven enterprise layers connected to the OperonIQ Intelligence Layer"
+          aria-label={t('ariaLabel')}
         >
           <defs>
             <radialGradient id="aom-cg" cx="50%" cy="50%" r="50%">
@@ -106,37 +110,37 @@ export function AgenticOperatingModel() {
           {/* 01 People — cx=170, cy=62; tile x=118, y=37, w=104, h=50 */}
           <rect x="118" y="37" width="104" height="50" rx="8" fill="#0F1B2E" stroke="#1E3252" strokeWidth="0.8" />
           <text x="130" y="53" fontSize="9" fill="#2E4668">01</text>
-          <text x="170" y="71" fontSize="13" fontWeight="500" fill="#C8D6EE" textAnchor="middle">People</text>
+          <text x="170" y="71" fontSize="13" fontWeight="500" fill="#C8D6EE" textAnchor="middle">{t('nodes.people')}</text>
 
           {/* 02 Process — cx=270, cy=118; tile x=218, y=93, w=104, h=50 */}
           <rect x="218" y="93" width="104" height="50" rx="8" fill="#0F1B2E" stroke="#1E3252" strokeWidth="0.8" />
           <text x="230" y="109" fontSize="9" fill="#2E4668">02</text>
-          <text x="270" y="127" fontSize="13" fontWeight="500" fill="#C8D6EE" textAnchor="middle">Process</text>
+          <text x="270" y="127" fontSize="13" fontWeight="500" fill="#C8D6EE" textAnchor="middle">{t('nodes.process')}</text>
 
           {/* 03 Data — cx=295, cy=243; tile x=232, y=218, w=104, h=50 */}
           <rect x="232" y="218" width="104" height="50" rx="8" fill="#0F1B2E" stroke="#1E3252" strokeWidth="0.8" />
           <text x="244" y="234" fontSize="9" fill="#2E4668">03</text>
-          <text x="284" y="252" fontSize="13" fontWeight="500" fill="#C8D6EE" textAnchor="middle">Data</text>
+          <text x="284" y="252" fontSize="13" fontWeight="500" fill="#C8D6EE" textAnchor="middle">{t('nodes.data')}</text>
 
           {/* 04 Applications — cx=238, cy=343; tile x=183, y=318, w=110, h=50 */}
           <rect x="183" y="318" width="110" height="50" rx="8" fill="#0F1B2E" stroke="#1E3252" strokeWidth="0.8" />
           <text x="195" y="334" fontSize="9" fill="#2E4668">04</text>
-          <text x="238" y="352" fontSize="11" fontWeight="500" fill="#C8D6EE" textAnchor="middle">Applications</text>
+          <text x="238" y="352" fontSize="11" fontWeight="500" fill="#C8D6EE" textAnchor="middle">{t('nodes.applications')}</text>
 
           {/* 05 Automation — cx=102, cy=343; tile x=47, y=318, w=110, h=50 */}
           <rect x="47" y="318" width="110" height="50" rx="8" fill="#0F1B2E" stroke="#1E3252" strokeWidth="0.8" />
           <text x="59" y="334" fontSize="9" fill="#2E4668">05</text>
-          <text x="102" y="352" fontSize="11" fontWeight="500" fill="#C8D6EE" textAnchor="middle">Automation</text>
+          <text x="102" y="352" fontSize="11" fontWeight="500" fill="#C8D6EE" textAnchor="middle">{t('nodes.automation')}</text>
 
           {/* 06 AI Agents — cx=45, cy=243; tile x=4, y=218, w=104, h=50 */}
           <rect x="4" y="218" width="104" height="50" rx="8" fill="#0F1B2E" stroke="#1E3252" strokeWidth="0.8" />
           <text x="16" y="234" fontSize="9" fill="#2E4668">06</text>
-          <text x="56" y="252" fontSize="12" fontWeight="500" fill="#C8D6EE" textAnchor="middle">AI Agents</text>
+          <text x="56" y="252" fontSize="12" fontWeight="500" fill="#C8D6EE" textAnchor="middle">{t('nodes.aiAgents')}</text>
 
           {/* 07 Governance — cx=70, cy=118; tile x=14, y=93, w=104, h=50 */}
           <rect x="14" y="93" width="104" height="50" rx="8" fill="#0F1B2E" stroke="#1E3252" strokeWidth="0.8" />
           <text x="26" y="109" fontSize="9" fill="#2E4668">07</text>
-          <text x="66" y="127" fontSize="12" fontWeight="500" fill="#C8D6EE" textAnchor="middle">Governance</text>
+          <text x="66" y="127" fontSize="12" fontWeight="500" fill="#C8D6EE" textAnchor="middle">{t('nodes.governance')}</text>
 
           {/* Intelligence Layer core — 134×78 rect at x=103, y=171 */}
           <rect x="103" y="171" width="134" height="78" rx="10" fill="#0C1726" stroke="#1B3A5C" strokeWidth="1" />
@@ -150,9 +154,9 @@ export function AgenticOperatingModel() {
           <line x1="163" y1="191" x2="159" y2="191" stroke="#4ECDA4" strokeWidth="0.9" />
           <line x1="177" y1="191" x2="181" y2="191" stroke="#4ECDA4" strokeWidth="0.9" />
 
-          <text x="170" y="208" fontSize="8" fill="#4ECDA4" letterSpacing="0.12em" textAnchor="middle">OPERONIQ</text>
-          <text x="170" y="222" fontSize="12" fontWeight="500" fill="#E8F0FF" textAnchor="middle">Intelligence Layer</text>
-          <text x="170" y="237" fontSize="9" fill="#4A5E7A" textAnchor="middle">Trusted data · governed AI</text>
+          <text x="170" y="208" fontSize="8" fill="#4ECDA4" letterSpacing="0.12em" textAnchor="middle">{t('core.brand')}</text>
+          <text x="170" y="222" fontSize="12" fontWeight="500" fill="#E8F0FF" textAnchor="middle">{t('core.title')}</text>
+          <text x="170" y="237" fontSize="9" fill="#4A5E7A" textAnchor="middle">{t('core.subtitle')}</text>
 
           {/* Border connection dots */}
           <circle cx="170" cy="171" r="2.5" fill="#1B3A5C" />

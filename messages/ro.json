@@ -1,0 +1,734 @@
+{
+  "Metadata": {
+    "home": {
+      "title": "OperonIQ | Consultanță pentru Întreprinderi Agentice",
+      "description": "OperonIQ ajută organizațiile să regândească operațiunile, să valorifice date de încredere și să implementeze forțe de muncă digitale bazate pe AI prin platforme moderne de business, automatizare și guvernanță."
+    },
+    "about": {
+      "title": "Despre | OperonIQ",
+      "description": "OperonIQ reunește practicieni seniori din transformare de business, design de procese, arhitectură de date, platforme enterprise și AI într-un singur model de livrare integrat."
+    },
+    "capabilities": {
+      "title": "Capabilități | OperonIQ",
+      "description": "Descoperă cele șase capabilități din spatele Motorului de Transformare OperonIQ — de la proiectarea modelului operațional și date de încredere, la automatizare inteligentă, AI agentic și guvernanță responsabilă."
+    },
+    "contact": {
+      "title": "Contact | OperonIQ",
+      "description": "Contactează OperonIQ pentru a discuta despre strategia de Întreprindere Agentică, date de încredere, automatizare, forțe de muncă digitale și guvernanță."
+    }
+  },
+  "Nav": {
+    "capabilities": "Capabilități",
+    "about": "Despre",
+    "contact": "Contact",
+    "cta": "Începe conversația"
+  },
+  "Footer": {
+    "tagline": "© {year} OperonIQ. Orchestrând afaceri inteligente prin date, automatizare și AI."
+  },
+  "LanguageSwitcher": {
+    "label": "Limbă"
+  },
+  "Home": {
+    "Hero": {
+      "badge": "CONSULTANȚĂ PENTRU ÎNTREPRINDERI AGENTICE",
+      "title": "Construim Întreprinderi Agentice",
+      "description": "OperonIQ ajută organizațiile să conecteze oamenii, datele, aplicațiile, automatizarea și AI într-un singur model operațional inteligent.",
+      "ctaPrimary": "Începe conversația",
+      "ctaSecondary": "Explorează capabilitățile"
+    },
+    "Diagram": {
+      "eyebrow": "Model Operațional Agentic",
+      "description": "Oameni, platforme și forțe de muncă digitale conectate prin guvernanță.",
+      "badge": "Nivel Enterprise",
+      "ariaLabel": "Model Operațional Agentic — șapte niveluri enterprise conectate la Nivelul de Inteligență OperonIQ",
+      "nodes": {
+        "people": "Oameni",
+        "process": "Proces",
+        "data": "Date",
+        "applications": "Aplicații",
+        "automation": "Automatizare",
+        "aiAgents": "Agenți AI",
+        "governance": "Guvernanță"
+      },
+      "core": {
+        "brand": "OPERONIQ",
+        "title": "Nivel de Inteligență",
+        "subtitle": "Date de încredere · AI guvernat"
+      }
+    },
+    "Problem": {
+      "eyebrow": "Provocarea",
+      "quote": "AI nu rezolvă haosul operațional. Îl amplifică.",
+      "title": "Forțele de muncă bazate pe AI au nevoie de mai mult decât instrumente deconectate.",
+      "body": "Multe organizații experimentează cu AI în timp ce operațiunile de bază depind încă de procese fragmentate, date deconectate, raportare manuală, proliferare necontrolată a platformelor și guvernanță slabă.",
+      "signals": [
+        "Procese fragmentate",
+        "Date deconectate",
+        "Raportare manuală",
+        "Proliferare de platforme",
+        "Guvernanță slabă"
+      ]
+    },
+    "Capabilities": {
+      "eyebrow": "Capabilități",
+      "title": "Șase Capabilități. Un Singur Motor de Transformare Agentică.",
+      "description": "OperonIQ combină transformarea de business, munca modernă, platformele de date, aplicațiile de business, automatizarea inteligentă și guvernanța pentru a ajuta organizațiile să devină pregătite pentru AI și agentice.",
+      "items": {
+        "01": {
+          "title": "Transformare de Business & Design al Modelului Operațional",
+          "headline": "Regândește modul în care funcționează businessul înainte de a introduce tehnologia.",
+          "description": "Mapăm procesele, modelele operaționale și oportunitățile de valoare pentru a identifica unde automatizarea și agenții AI pot crea un impact măsurabil."
+        },
+        "02": {
+          "title": "Muncă Modernă & Colaborare Inteligentă",
+          "headline": "Creăm un loc de muncă pregătit pentru AI, pentru oameni și lucrători digitali.",
+          "description": "Creăm un loc de muncă pregătit pentru AI în care oamenii, cunoștințele și lucrătorii digitali colaborează eficient în Microsoft 365, Teams, SharePoint, Viva și medii pregătite pentru Copilot."
+        },
+        "03": {
+          "title": "Fundații de Date, Analitică & AI",
+          "headline": "Construim platforme de date de încredere care alimentează deciziile și agenții.",
+          "description": "Construim platforme de date de încredere care alimentează deciziile, automatizarea și AI folosind Microsoft Fabric, Snowflake, Databricks, Power BI, Python, machine learning și guvernanța datelor."
+        },
+        "04": {
+          "title": "Aplicații de Business Conectate",
+          "headline": "Conectăm CRM, ERP și fluxurile de lucru operaționale.",
+          "description": "Conectăm CRM, ERP și fluxurile de lucru operaționale prin Dynamics 365, Business Central și platforme de business, astfel încât agenții AI să poată interacționa cu sisteme reale de evidență."
+        },
+        "05": {
+          "title": "Automatizare Inteligentă & AI Agentic",
+          "headline": "Proiectăm forțe de muncă digitale care accelerează execuția.",
+          "description": "Proiectăm, implementăm și guvernăm agenți AI, arhitecturi multi-agent, automatizare a fluxurilor de lucru și forțe de muncă digitale folosind Python, machine learning și servicii AI în cloud pentru a reduce munca manuală și a accelera execuția."
+        },
+        "06": {
+          "title": "Guvernanță, Calitate & AI Responsabil",
+          "headline": "Menținem transformarea agentică sigură, controlată și scalabilă.",
+          "description": "Integrăm QA, guvernanța platformei, testare, controale, validarea adopției și măsuri de protecție pentru AI responsabil în fiecare inițiativă de transformare."
+        }
+      }
+    },
+    "OperatingModel": {
+      "eyebrow": "Cum Lucrăm",
+      "title": "Cum Prinde Contur Munca într-o Întreprindere Agentică",
+      "description": "De la descoperirea inițială la o operațiune agentică guvernată și scalabilă.",
+      "steps": {
+        "discover": {
+          "title": "Descoperă",
+          "text": "Clarificăm prioritățile strategice, blocajele de proces, lacunele în date de încredere și gradul de pregătire pentru forțe de muncă digitale bazate pe AI."
+        },
+        "design": {
+          "title": "Proiectează",
+          "text": "Definim modelul operațional țintă, arhitectura platformei, guvernanța și cazurile de valoare pentru operațiuni agentice."
+        },
+        "orchestrate": {
+          "title": "Orchestrează",
+          "text": "Coordonăm datele, aplicațiile, automatizarea și agenții AI într-un model de execuție conectat."
+        },
+        "govern": {
+          "title": "Guvernează",
+          "text": "Stabilim drepturile decizionale, controalele de calitate, standardele de platformă și măsurile de protecție agentice responsabile."
+        },
+        "scale": {
+          "title": "Scalează",
+          "text": "Scalăm tiparele forței de muncă digitale prin capacitare, măsurare și ritmuri operaționale executive."
+        }
+      }
+    },
+    "Audience": {
+      "eyebrow": "Pe cine ajutăm",
+      "title": "Construit pentru organizații pregătite să operaționalizeze AI.",
+      "body": "Organizații mid-market și enterprise care își modernizează operațiunile, datele de încredere, platformele de business și guvernanța, astfel încât forțele de muncă digitale bazate pe AI să poată scala cu încredere."
+    },
+    "FinalCTA": {
+      "title": "Ești pregătit să construiești o Întreprindere Agentică?",
+      "cta": "Începe conversația"
+    }
+  },
+  "About": {
+    "hero": {
+      "eyebrow": "Despre OperonIQ",
+      "titleLine1": "Construit pe Expertiză Profundă.",
+      "titleLine2": "Livrat ca Transformare Integrată.",
+      "body": "OperonIQ reunește practicieni seniori din transformare de business, regândirea proceselor, arhitectură de date, platforme enterprise, automatizare inteligentă și AI — unificați într-un singur model de livrare care conectează intenția strategică la schimbarea operațională măsurabilă."
+    },
+    "conviction": {
+      "eyebrow": "Convingerea Noastră",
+      "title": "Transformarea reală începe înainte de tehnologie.",
+      "p1": "Înainte ca orice platformă să fie selectată sau orice agent AI implementat, procesul de business trebuie înțeles, regândit și asumat de oamenii care îl conduc. Tehnologia suprapusă peste procese slab definite sau fragmentate nu creează capabilitate — creează complexitate la scară.",
+      "p2Prefix": "OperonIQ tratează",
+      "p2Bold": "regândirea proceselor de business ca fundație a fiecărui angajament",
+      "p2Suffix": ". Mapăm modul în care circulă efectiv munca, identificăm unde se blochează și proiectăm modelul operațional țintă înainte de a recomanda vreun instrument sau platformă. Aceasta nu este o etapă de descoperire — este chiar munca.",
+      "calloutLabel": "Abordarea Noastră privind Regândirea Proceselor",
+      "calloutItems": [
+        "Mapăm procesele actuale, punctele de decizie și blocajele între funcțiuni",
+        "Proiectăm modelul operațional țintă cu asumare clară și legătură cu valoarea",
+        "Identificăm unde automatizarea, agenții AI și datele pot îmbunătăți procesele regândite",
+        "Validăm impactul schimbării și aliniem leadershipul înainte de a începe implementarea"
+      ],
+      "beliefs": {
+        "processBeforePlatform": {
+          "label": "Procesul Înaintea Platformei",
+          "note": "Claritatea modelului operațional precede orice selecție de tehnologie."
+        },
+        "trustedData": {
+          "label": "Date de Încredere",
+          "note": "Informații guvernate, cu calitate asigurată, la baza fiecărei decizii."
+        },
+        "intelligentAutomation": {
+          "label": "Automatizare Inteligentă",
+          "note": "Automatizare care raționează, se adaptează și escaladează — nu doar execută reguli."
+        },
+        "responsibleAi": {
+          "label": "AI Responsabil",
+          "note": "Implementat cu explicabilitate, echitate și supraveghere umană integrate."
+        },
+        "measurableOutcomes": {
+          "label": "Rezultate Măsurabile",
+          "note": "Valoare validată la fiecare etapă, nu doar la închiderea programului."
+        }
+      }
+    },
+    "why": {
+      "eyebrow": "De ce OperonIQ",
+      "title": "Piața fragmentează ceea ce organizațiile au nevoie să fie unitar.",
+      "p1": "Majoritatea firmelor de consultanță sunt organizate în jurul unei singure discipline — consultanță de business, inginerie de date, platforme Microsoft sau strategie AI. Clienții rămân să coordoneze între furnizori, să concilieze recomandări divergente și să absoarbă lacunele care apar între specializări.",
+      "p2": "OperonIQ a fost creată pentru a închide aceste lacune. Practicienii noștri au profunzime în business, date, platforme și AI — iar modelul nostru de livrare este conceput astfel încât aceste discipline se susțin reciproc, nu operează secvențial.",
+      "marketLabel": "Ce oferă piața separat",
+      "marketItems": [
+        "Consultanță de Business",
+        "Consultanță de Date",
+        "Consultanță Microsoft",
+        "Consultanță AI"
+      ],
+      "unify": "OperonIQ le unifică pe toate într-un singur model de transformare integrat."
+    },
+    "expertise": {
+      "eyebrow": "Expertiza Noastră",
+      "description": "Șase arii de capabilitate integrate, fiecare susținută de practicieni seniori cu cunoștințe profunde de domeniu și experiență practică de livrare.",
+      "items": {
+        "01": {
+          "title": "Transformare de Business",
+          "description": "Regândirea modelului operațional, mapare de procese, foi de parcurs pentru transformare legate de valoare și facilitarea structurată a schimbării. Fundația înainte de introducerea oricărei platforme sau agent."
+        },
+        "02": {
+          "title": "Muncă Modernă",
+          "description": "Strategie Microsoft 365, pregătire pentru Copilot, arhitectură a cunoștințelor și guvernanță a colaborării pentru a construi locuri de muncă pregătite pentru AI, în care oamenii și lucrătorii digitali operează eficient."
+        },
+        "03": {
+          "title": "Date & Analitică",
+          "description": "Modernizarea platformei de date, design al stratului semantic, strategie de analitică, cadre de guvernanță și fundații de date pregătite pentru AI folosind Fabric, Snowflake, Databricks și Power BI."
+        },
+        "04": {
+          "title": "Aplicații de Business",
+          "description": "Consultanță Dynamics 365, Business Central și Power Platform pentru a conecta CRM, ERP și fluxurile de lucru operaționale — creând stratul de sisteme de evidență pe care agenții AI pot acționa."
+        },
+        "05": {
+          "title": "Automatizare & AI Agentic",
+          "description": "Design și implementare de agenți, arhitecturi multi-agent, strategie a forței de muncă digitale și programe de automatizare inteligentă care reduc efortul manual și accelerează execuția."
+        },
+        "06": {
+          "title": "Guvernanță & Calitate",
+          "description": "Cadre de AI responsabil, inginerie a calității, guvernanță a platformei și practici de testare automatizată care mențin transformarea controlată, auditabilă și scalabilă."
+        }
+      }
+    },
+    "techEcosystem": {
+      "eyebrow": "Ecosistem Tehnologic",
+      "description": "Suntem agnostici din punct de vedere tehnologic în abordare și fermi în execuție. Platformele de mai jos sunt instrumentele pe care le folosim pentru a livra transformarea — nu produse pe care le vindem.",
+      "groups": {
+        "microsoft": "Ecosistem Microsoft",
+        "dataCloud": "Date & Cloud",
+        "engineeringAi": "Inginerie & AI"
+      }
+    }
+  },
+  "Capabilities": {
+    "hero": {
+      "eyebrow": "Capabilități",
+      "title": "Șase capabilități. Un singur motor de transformare.",
+      "description": "Fiecare pilon abordează un nivel distinct al modelului operațional. Împreună, formează capabilitatea integrată care face posibilă transformarea agentică."
+    },
+    "ecosystemLabel": "Ecosistem",
+    "serviceCard": {
+      "challenge": "Provocarea de Business",
+      "outcomes": "Rezultate Așteptate",
+      "deliverables": "Livrabile"
+    },
+    "pillars": {
+      "01": {
+        "name": "Transformare de Business",
+        "conviction": "Regândește modul în care funcționează businessul înainte de a introduce tehnologia.",
+        "services": {
+          "s01-01": {
+            "name": "Evaluarea Pregătirii Agentice",
+            "challenge": "Liderii nu au o imagine clară asupra locurilor unde agenții AI autonomi pot opera în siguranță și profitabil în cadrul organizației lor.",
+            "outcomes": [
+              "Hartă a oportunităților ierarhizată pe funcțiuni",
+              "Inventar de riscuri și dependențe",
+              "Foaie de parcurs agentică aliniată la nivel executiv"
+            ],
+            "deliverables": [
+              "Scorecard de pregătire",
+              "Plan de câștiguri rapide pe 90 de zile",
+              "Prezentare pregătită pentru consiliul director"
+            ],
+            "tags": ["Analiză de sondaje în Python", "Scoring al oportunităților prin ML"]
+          },
+          "s01-02": {
+            "name": "Evaluarea Transformării de Business",
+            "challenge": "Organizațiile se confruntă cu presiunea de a se moderniza, dar au dificultăți în a lega investițiile tehnologice de rezultate de business măsurabile.",
+            "outcomes": [
+              "Analiza decalajelor modelului operațional",
+              "Priorități de transformare legate de valoare",
+              "Referință de bază pentru impactul schimbării"
+            ],
+            "deliverables": [
+              "Hărți ale proceselor din starea actuală",
+              "Business case cu model ROI",
+              "Foaie de parcurs pentru transformare"
+            ],
+            "tags": ["Modelare cost-beneficiu bazată pe ML"]
+          },
+          "s01-03": {
+            "name": "Strategia Forței de Muncă AI",
+            "challenge": "Directorii au nevoie de un plan credibil pentru a integra lucrătorii digitali alături de forța de muncă umană fără a perturba cultura sau productivitatea.",
+            "outcomes": [
+              "Model de alocare a sarcinilor între oameni și agenți",
+              "Design al programului de upskilling și schimbare",
+              "KPI pentru performanța forței de muncă digitale"
+            ],
+            "deliverables": [
+              "Taxonomie de roluri și blueprint al agentului",
+              "Ghid de adopție",
+              "Plan de tranziție a forței de muncă"
+            ],
+            "tags": ["Prognoza cererii forței de muncă prin ML", "Analiză a decalajelor de competențe în Python"]
+          },
+          "s01-04": {
+            "name": "Consultanță Executivă",
+            "challenge": "Liderii C-suite au nevoie de îndrumare de încredere, neutră față de furnizori, pentru a naviga capabilitățile AI aflate în evoluție rapidă și dinamica competitivă.",
+            "outcomes": [
+              "Decizii de investiție AI mai clare",
+              "Risc redus al programului",
+              "Fluență AI la nivel de consiliu director"
+            ],
+            "deliverables": [
+              "Sesiuni lunare de consultanță",
+              "Rapoarte de monitorizare a tendințelor",
+              "Cadre decizionale și documente de poziție"
+            ]
+          }
+        }
+      },
+      "02": {
+        "name": "Muncă Modernă",
+        "conviction": "Permite oamenilor să colaboreze, să decidă și să execute mai rapid.",
+        "services": {
+          "s02-01": {
+            "name": "Strategie Microsoft 365",
+            "challenge": "Organizațiile au investit în Microsoft 365, dar au dificultăți în a obține valoare dincolo de email și stocarea de bază a fișierelor.",
+            "outcomes": [
+              "Strategie unificată de adopție pentru toate încărcăturile de lucru M365",
+              "Îmbunătățiri măsurabile ale productivității",
+              "Fundație a locului de muncă pregătită pentru AI"
+            ],
+            "deliverables": [
+              "Evaluarea maturității M365",
+              "Foaie de parcurs pentru adopție",
+              "Revizuire a guvernanței și licențierii"
+            ]
+          },
+          "s02-02": {
+            "name": "Program de Pregătire pentru Copilot",
+            "challenge": "Implementarea Microsoft Copilot fără a pregăti oamenii, procesele, conținutul și guvernanța duce la adopție scăzută și investiții irosite.",
+            "outcomes": [
+              "Adopție ridicată a Copilot încă din prima zi",
+              "Utilizare guvernată în toate funcțiunile",
+              "Creștere măsurabilă a productivității"
+            ],
+            "deliverables": [
+              "Scorecard de pregătire Copilot",
+              "Plan de pregătire a conținutului și datelor",
+              "Program de adopție și schimbare"
+            ]
+          },
+          "s02-03": {
+            "name": "Guvernanța Teams & SharePoint",
+            "challenge": "Mediile Teams și SharePoint negovernate creează proliferare necontrolată, duplicare și risc de securitate pe măsură ce organizațiile cresc.",
+            "outcomes": [
+              "Mediu de colaborare controlat și conform",
+              "Cunoștințe găsibile și de încredere",
+              "Duplicare și costuri reduse"
+            ],
+            "deliverables": [
+              "Cadru de guvernanță și politici",
+              "Managementul ciclului de viață al site-urilor și echipelor",
+              "Program de instruire și adopție"
+            ]
+          },
+          "s02-04": {
+            "name": "Managementul Cunoștințelor",
+            "challenge": "Cunoștințele organizaționale critice sunt blocate în email, în mințile oamenilor sau în conținut nestructurat pe care AI nu îl poate folosi în mod fiabil.",
+            "outcomes": [
+              "Bază de cunoștințe structurată și găsibilă",
+              "Arhitectură de conținut pregătită pentru AI",
+              "Timp redus de onboarding și suport"
+            ],
+            "deliverables": [
+              "Design al arhitecturii cunoștințelor",
+              "Implementare Viva Topics sau SharePoint",
+              "Ghid de curatoriere a conținutului"
+            ]
+          }
+        }
+      },
+      "03": {
+        "name": "Date & Analitică",
+        "conviction": "Transformă datele fragmentate în informații de încredere.",
+        "services": {
+          "s03-01": {
+            "name": "Pregătirea Platformei de Date",
+            "challenge": "Platformele de date fragmentate și învechite blochează adopția AI și creează blocaje care încetinesc luarea deciziilor la nivelul întregii organizații.",
+            "outcomes": [
+              "Arhitectură lakehouse unificată și scalabilă",
+              "Fluxuri fiabile care alimentează sarcinile AI",
+              "Efort redus de inginerie a datelor"
+            ],
+            "deliverables": [
+              "Blueprint al arhitecturii platformei",
+              "Bibliotecă de pipeline-uri ETL în Python",
+              "Ghid de migrare"
+            ],
+            "tags": ["Pipeline-uri Python / PySpark", "Feature store pregătit pentru ML"]
+          },
+          "s03-02": {
+            "name": "Modernizarea Analiticii",
+            "challenge": "Dashboard-urile raportează ce s-a întâmplat — directorii au nevoie de informații orientate spre viitor pentru a acționa înaintea curbei.",
+            "outcomes": [
+              "Trecere de la analitică descriptivă la predictivă",
+              "Informații self-service în toate unitățile de business",
+              "Timp mai rapid până la insight"
+            ],
+            "deliverables": [
+              "Modele de prognoză bazate pe ML",
+              "Strat semantic și catalog de rapoarte",
+              "Program de upskilling pentru analiști"
+            ],
+            "tags": ["Python (scikit-learn, statsmodels)", "ML predictiv & prescriptiv"]
+          },
+          "s03-03": {
+            "name": "Guvernanța Datelor",
+            "challenge": "Fără o proprietate clară asupra datelor și controale de calitate, sistemele AI moștenesc erorile și biasurile datelor subiacente.",
+            "outcomes": [
+              "Date de încredere la nivelul întregii organizații",
+              "Poziție de conformitate reglementară",
+              "Incidente de date și retușuri reduse"
+            ],
+            "deliverables": [
+              "Catalog de date și mapare a provenienței (lineage)",
+              "Verificări automate de calitate (Python / Great Expectations)",
+              "Model operațional de guvernanță"
+            ],
+            "tags": ["Automatizare Python a calității datelor", "Detectare de anomalii prin ML în calitatea datelor"]
+          },
+          "s03-04": {
+            "name": "Fundații de Date pentru AI",
+            "challenge": "Cea mai mare parte a datelor enterprise nu are forma sau calitatea necesară pentru a alimenta sarcini AI și LLM în producție.",
+            "outcomes": [
+              "Seturi de date curate, pregătite pentru fine-tuning LLM și RAG",
+              "Infrastructură de vector store și embeddings",
+              "Mediu reproductibil pentru experimente ML"
+            ],
+            "deliverables": [
+              "Pipeline-uri de feature engineering",
+              "Strat de embeddings și retrieval",
+              "Configurare de tracking al experimentelor MLflow"
+            ],
+            "tags": ["Python (LangChain, MLflow, HuggingFace)", "Feature engineering & embeddings"]
+          }
+        }
+      },
+      "04": {
+        "name": "Aplicații de Business",
+        "conviction": "Conectează CRM, ERP și fluxurile de lucru operaționale.",
+        "services": {
+          "s04-01": {
+            "name": "Consultanță CRM Dynamics 365",
+            "challenge": "Implementările CRM eșuează adesea să reflecte modul în care businessul vinde, deservește sau reține efectiv clienții.",
+            "outcomes": [
+              "CRM aliniat la realitatea parcursului clientului",
+              "Adopție mai mare în echipele de vânzări și service",
+              "Date mai curate care alimentează AI și raportarea"
+            ],
+            "deliverables": [
+              "Revizuire a proceselor și cerințelor",
+              "Mediu CRM configurat și testat",
+              "Program de adopție și instruire"
+            ]
+          },
+          "s04-02": {
+            "name": "Optimizarea Business Central",
+            "challenge": "Echipele de finanțe și operațiuni lucrează pe lângă Business Central, nu prin el, creând soluții manuale de ocolire și lacune în date.",
+            "outcomes": [
+              "Soluții manuale de ocolire reduse",
+              "Date financiare și operaționale fiabile",
+              "ERP poziționat să susțină agenți AI"
+            ],
+            "deliverables": [
+              "Revizuire a alinierii proceselor",
+              "Corecții de configurare și integrare",
+              "Îmbunătățiri de raportare și automatizare"
+            ]
+          },
+          "s04-03": {
+            "name": "Transformarea Parcursului Clientului",
+            "challenge": "Sistemele deconectate creează experiențe fragmentate ale clienților care afectează retenția și fac imposibil serviciul asistat de AI.",
+            "outcomes": [
+              "Vizibilitate end-to-end asupra parcursului clientului",
+              "Experiență consistentă în toate punctele de contact",
+              "Model de date al clientului pregătit pentru AI"
+            ],
+            "deliverables": [
+              "Mapare a parcursului și analiză a decalajelor",
+              "Arhitectură unificată a datelor clientului",
+              "Plan de integrare a automatizării și agenților"
+            ],
+            "tags": ["Predicție de churn prin ML"]
+          }
+        }
+      },
+      "05": {
+        "name": "Automatizare & AI Agentic",
+        "conviction": "Proiectează forțe de muncă digitale care accelerează execuția.",
+        "services": {
+          "s05-01": {
+            "name": "Fabrica de Agenți",
+            "challenge": "Organizațiile vor să implementeze agenți AI rapid, dar nu au uneltele reutilizabile și standardele necesare pentru a face acest lucru la scară.",
+            "outcomes": [
+              "Bibliotecă reutilizabilă de componente pentru agenți",
+              "Furnizare rapidă de agenți în zile, nu luni",
+              "Bază de referință consistentă pentru calitate și siguranță"
+            ],
+            "deliverables": [
+              "SDK Python pentru agenți și repository de șabloane",
+              "Pipeline CI/CD pentru implementarea agenților",
+              "Program de capacitare a dezvoltatorilor"
+            ],
+            "tags": ["Python (LangGraph, AutoGen, SK)", "Orchestrare & rutare LLM"]
+          },
+          "s05-02": {
+            "name": "Arhitecturi Multi-Agent",
+            "challenge": "Fluxurile de lucru complexe necesită rețele de agenți specializați care colaborează, delegă și verifică reciproc rezultatele.",
+            "outcomes": [
+              "Automatizare end-to-end a fluxurilor de lucru cu mai mulți pași",
+              "Recuperare robustă din erori și toleranță la defecte",
+              "Traseu de audit transparent între treceri ale agenților"
+            ],
+            "deliverables": [
+              "Design al topologiei multi-agent",
+              "Implementare Python (LangGraph / AutoGen)",
+              "Suită de teste de integrare și stack de observabilitate"
+            ],
+            "tags": ["Python (LangGraph, AutoGen)", "Reinforcement learning pentru rutare"]
+          },
+          "s05-03": {
+            "name": "Programe de Automatizare Inteligentă",
+            "challenge": "Programele RPA tradiționale ating un plafon odată ce regulile simple se epuizează — automatizarea inteligentă adaugă discernământ proceselor cu multe excepții.",
+            "outcomes": [
+              "Rate mai mari de procesare fără intervenție (straight-through)",
+              "Cost redus de gestionare a excepțiilor",
+              "Automatizare care învață și se adaptează în timp"
+            ],
+            "deliverables": [
+              "Evaluare a inteligenței proceselor",
+              "Fluxuri de automatizare îmbunătățite cu ML",
+              "Tracker de realizare a beneficiilor"
+            ],
+            "tags": ["Integrare de pipeline ML în Python", "Clasificare & înțelegere a documentelor"]
+          },
+          "s05-04": {
+            "name": "Capacitarea Forței de Muncă Digitale",
+            "challenge": "Implementarea agenților izolat creează soluții punctuale — scalarea către o forță de muncă digitală reală necesită infrastructură și guvernanță comune.",
+            "outcomes": [
+              "Flotă coordonată de agenți care operează end-to-end",
+              "Câștiguri măsurabile de capacitate în funcțiunile țintă",
+              "Puncte de control human-in-the-loop impuse"
+            ],
+            "deliverables": [
+              "Arhitectură a forței de muncă digitale",
+              "Strat de orchestrare a agenților (Python)",
+              "Ghid operațional și SLA-uri"
+            ],
+            "tags": ["Strat de orchestrare în Python", "Programare a sarcinilor bazată pe ML"]
+          },
+          "s05-05": {
+            "name": "Design de Agenți AI",
+            "challenge": "Fără un design atent, agenții AI nu reușesc să câștige încrederea utilizatorilor, se comportă inconsistent sau optimizează pentru rezultate greșite.",
+            "outcomes": [
+              "Agenți intuitivi, fiabili și siguri",
+              "Domeniu, personalitate și trasee de escaladare clare",
+              "Rate ridicate de adopție din partea utilizatorilor"
+            ],
+            "deliverables": [
+              "Specificație de design al agentului",
+              "Bibliotecă de prompt-uri și cadru de evaluare",
+              "Prototip UX și rezultate pilot"
+            ],
+            "tags": ["Cadre de evaluare Python (RAGAS, DeepEval)", "Optimizare de prompt-uri & testare A/B"]
+          }
+        }
+      },
+      "06": {
+        "name": "Guvernanță & Calitate",
+        "conviction": "Menține transformarea sigură, controlată și scalabilă.",
+        "services": {
+          "s06-01": {
+            "name": "Guvernanța AI Responsabil",
+            "challenge": "Consiliile directoare și autoritățile de reglementare cer dovezi că sistemele AI sunt echitabile, transparente și sigure — puține organizații au cadrele necesare pentru a demonstra acest lucru.",
+            "outcomes": [
+              "Registru de riscuri AI auditabil",
+              "Detectare și atenuare a biasului implementate",
+              "Poziție de conformitate reglementară (Legea AI a UE)"
+            ],
+            "deliverables": [
+              "Politică și ghid de AI responsabil",
+              "Toolkit Python de evaluare a echității",
+              "Model cards pentru toate modelele din producție"
+            ],
+            "tags": ["Python (Fairlearn, InterpretML)", "Audit de bias & explicabilitate"]
+          },
+          "s06-02": {
+            "name": "Inginerie a Calității",
+            "challenge": "Sistemele AI necesită abordări de testare dincolo de QA tradițional — acoperind comportamentul modelului, robustețea prompt-urilor și fiabilitatea integrării.",
+            "outcomes": [
+              "Implementare cu încredere a modificărilor AI",
+              "Rate reduse de regresie și halucinație",
+              "Porți de calitate automatizate în CI/CD"
+            ],
+            "deliverables": [
+              "Strategie de testare specifică AI",
+              "Pipeline-uri automate de evaluare (pytest + judecători LLM)",
+              "Dashboard de calitate și alertare"
+            ],
+            "tags": ["Automatizare de testare Python (pytest, RAGAS)", "Evaluare LLM-as-judge"]
+          },
+          "s06-03": {
+            "name": "Guvernanța Platformei",
+            "challenge": "Pe măsură ce platformele AI cresc, proliferarea negovernată duce la depășiri de costuri, breșe de securitate și experiență inconsistentă a utilizatorilor.",
+            "outcomes": [
+              "Utilizare controlată și conformă a platformei",
+              "Vizibilitate și optimizare a costurilor",
+              "Măsuri de protecție consistente în toate implementările"
+            ],
+            "deliverables": [
+              "Cadru de guvernanță a platformei",
+              "Implementare policy-as-code",
+              "Rapoarte de utilizare și dashboard-uri de costuri"
+            ],
+            "tags": ["Scripturi Python policy-as-code", "Detectare de anomalii prin ML în tiparele de utilizare"]
+          },
+          "s06-04": {
+            "name": "Retainer de Consultanță pentru Transformare",
+            "challenge": "Susținerea impulsului de transformare necesită capacitate expertă continuă pe care majoritatea echipelor interne nu o pot menține singure.",
+            "outcomes": [
+              "Îmbunătățire continuă integrată în operațiuni",
+              "Răspuns rapid la evoluțiile AI emergente",
+              "Aliniere menținută între AI și strategia de business"
+            ],
+            "deliverables": [
+              "Verificări lunare de stare și revizuiri ale performanței modelelor",
+              "Revizuiri strategice trimestriale",
+              "Acces la expertiză la cerere"
+            ],
+            "tags": ["Monitorizare a driftului modelelor prin ML", "Dashboard-uri de monitorizare în Python"]
+          }
+        }
+      }
+    },
+    "engage": {
+      "eyebrow": "Cum Colaborăm",
+      "cards": {
+        "aiReadiness": {
+          "title": "Evaluarea Pregătirii pentru AI",
+          "meta": "2–4 săptămâni",
+          "description": "Evaluăm maturitatea AI, expunerea datelor, lacunele de guvernanță și construim o foaie de parcurs executivă."
+        },
+        "businessTransformation": {
+          "title": "Evaluarea Transformării de Business",
+          "meta": "4–6 săptămâni",
+          "description": "Mapăm blocajele de proces și proiectăm modelul operațional țintă printr-o foaie de parcurs legată de valoare."
+        },
+        "dataPlatform": {
+          "title": "Pregătirea Platformei de Date",
+          "meta": "2–4 săptămâni",
+          "description": "Evaluăm Fabric, Snowflake, Databricks, maturitatea analiticii și poziția de guvernanță a datelor."
+        },
+        "copilotEnablement": {
+          "title": "Program de Activare Copilot",
+          "meta": "1–3 luni",
+          "description": "Pregătim oamenii, procesele, conținutul și guvernanța pentru Microsoft Copilot la scară."
+        },
+        "automationDiscovery": {
+          "title": "Descoperirea Oportunităților de Automatizare",
+          "meta": "2–3 săptămâni",
+          "description": "Identificăm oportunități de automatizare cu valoare ridicată și cuantificăm business case-ul pentru acțiune."
+        },
+        "fractionalArchitecture": {
+          "title": "Servicii de Arhitectură Fracționată",
+          "meta": "Continuu",
+          "description": "Consultanță strategică în business, date, aplicații, automatizare și AI."
+        }
+      },
+      "ctaLine": "Fiecare evaluare este concepută să dezvăluie o foaie de parcurs de transformare mai amplă.",
+      "ctaLink": "Începe conversația →"
+    }
+  },
+  "Contact": {
+    "panel": {
+      "eyebrow": "Contact",
+      "title": "Începe conversația.",
+      "body": "Spune-ne ce te preocupă. Te vom pune în legătură cu persoana potrivită din echipa noastră și îți vom răspunde în cel mult o zi lucrătoare.",
+      "features": {
+        "responseTime": {
+          "title": "Timp de răspuns",
+          "desc": "În cel mult o zi lucrătoare"
+        },
+        "whoYouSpeak": {
+          "title": "Cu cine vei vorbi",
+          "desc": "Un practician senior, nu o echipă de vânzări"
+        },
+        "noCommitment": {
+          "title": "Fără obligații",
+          "desc": "O primă conversație nu costă nimic"
+        }
+      }
+    },
+    "chat": {
+      "name": "NexIQ",
+      "activeNow": "Activ acum",
+      "placeholder": "Scrie răspunsul tău...",
+      "placeholderDone": "Conversație finalizată.",
+      "sendAria": "Trimite mesajul",
+      "opening": "Mulțumim că ne-ai contactat. Sunt NexIQ, asistentul de preluare al OperonIQ - îți voi pune câteva întrebări scurte astfel încât persoana potrivită din echipa noastră să fie complet pregătită atunci când te va contacta. Pentru început: ce te-a adus la OperonIQ astăzi?",
+      "genericError": "Ceva nu a mers bine - te rugăm să încerci din nou.",
+      "networkError": "Ceva nu a mers bine din partea noastră - te rugăm să încerci din nou sau să ne scrii direct la hello@operoniq.com.",
+      "quickOpts": {
+        "area": [
+          "Ineficiență de proces",
+          "Pregătire pentru date & AI",
+          "Consolidare de platforme",
+          "Oportunitate de automatizare",
+          "O combinație"
+        ],
+        "size": ["Sub 500", "500-2.000", "2.000-5.000", "Peste 5.000"],
+        "timeline": [
+          "Pe agenda AI a consiliului director",
+          "Implementare eșuată",
+          "Impuls de transformare digitală",
+          "Fără un declanșator specific încă"
+        ]
+      }
+    }
+  },
+  "NexIQSystem": "Ești NexIQ, asistentul de preluare pentru OperonIQ - o firmă de consultanță boutique condusă de practicieni seniori, specializată în transformare de business, date, automatizare și AI agentic. Singura ta sarcină este să aduni contextul inițial de la un potențial client, astfel încât atunci când un practician senior OperonIQ îl contactează, să fie complet pregătit.\n\nTon: direct, cald, profesionist. Fără umpluturi. Fără limbaj corporatist artificial. Fără emoji. Sună ca un consultant senior, nu ca un chatbot. Nu spune niciodată \"Excelent!\", \"Perfect!\" sau \"Desigur!\". Fără afirmații goale.\n\nRăspunde doar în limba română, indiferent de limba folosită de vizitator.\n\nTe-ai prezentat deja și ai întrebat ce l-a adus la OperonIQ. Acum pune aceste întrebări pe rând, în ordine:\n1. Ce zonă a businessului este cel mai afectată - proces, date, tehnologie, oameni sau o combinație?\n2. Cam cât de mare este organizația?\n3. Există un termen sau un declanșator specific care determină acest demers?\n4. Cum arată un rezultat de succes în următoarele 6-12 luni?\n\nDupă al patrulea răspuns: mulțumește-i pe scurt, confirmă că un membru senior al echipei OperonIQ îl va contacta în cel mult o zi lucrătoare și cere-i numele și adresa de email pentru a putea direcționa conversația către persoana potrivită. Apoi încheie cald și concis - fără alte întrebări după aceea.\n\nReguli stricte:\n- O singură întrebare per mesaj\n- Fiecare mesaj să aibă sub 3 propoziții\n- Confirmă pe scurt răspunsul lor înainte de a pune următoarea întrebare - nu repeta niciodată textual\n- Nu oferi niciodată sfaturi, analize sau descrieri de servicii\n- Extrage următoarele din conversație și include-le ca bloc JSON la finalul ultimului tău mesaj (după ce ai colectat numele și emailul), pe propriul rând, fără alt text după el:\n  SUMMARY_JSON:{\"trigger\":\"...\",\"area\":\"...\",\"size\":\"...\",\"timeline\":\"...\",\"outcome\":\"...\",\"name\":\"...\",\"email\":\"...\"}"
+}

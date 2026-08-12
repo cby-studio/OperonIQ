@@ -1,4 +1,38 @@
-import { agenticAiServices } from './content';
+import { Bot, Network, SearchCheck, ShieldCheck } from 'lucide-react';
+import type { AgenticAiService } from './types';
+
+// NOTE: This component is not currently rendered by any page. Copy here is
+// intentionally left untranslated since it has no live audience.
+const agenticAiServices: AgenticAiService[] = [
+  {
+    icon: SearchCheck,
+    number: '01',
+    title: 'Agentic Readiness Assessment',
+    description:
+      'Assess organizational readiness for enterprise AI agents across data, applications, automation, governance and operating model maturity.',
+  },
+  {
+    icon: Bot,
+    number: '02',
+    title: 'Agent Factory',
+    description:
+      'Design, build and deploy enterprise AI agents for functions such as HR, Finance, Sales, Customer Service, Operations and Knowledge Management.',
+  },
+  {
+    icon: Network,
+    number: '03',
+    title: 'AI Workforce Strategy',
+    description:
+      'Define how humans, automations and AI agents collaborate across the organization to improve productivity and decision-making.',
+  },
+  {
+    icon: ShieldCheck,
+    number: '04',
+    title: 'Agent Governance Framework',
+    description:
+      'Establish policies, controls, lifecycle management, monitoring and responsible AI guardrails for enterprise agents.',
+  },
+];
 
 export function AgenticAiServicesSection() {
   return (

@@ -1,5 +1,10 @@
-import { redirect } from 'next/navigation';
+import { redirect } from '@/i18n/navigation';
 
-export default function ServicesPage() {
-  redirect('/capabilities');
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export default async function ServicesPage({ params }: Props) {
+  const { locale } = await params;
+  redirect({ href: '/capabilities', locale });
 }

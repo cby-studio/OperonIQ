@@ -1,5 +1,18 @@
-import { services } from './content';
+import { Bot, DatabaseZap, Gauge, Network, SearchCheck, Workflow } from 'lucide-react';
 import { ServiceCard } from './ServiceCard';
+import type { Service } from './types';
+
+// NOTE: This component is not currently rendered by any page (the home page
+// uses CapabilitiesSection instead). Copy here is intentionally left
+// untranslated since it has no live audience.
+const services: Service[] = [
+  { icon: SearchCheck, title: 'Agentic Enterprise Readiness' },
+  { icon: Workflow, title: 'Digital Workforce Opportunity Mapping' },
+  { icon: DatabaseZap, title: 'Trusted Data Platform Readiness' },
+  { icon: Bot, title: 'AI Workforce Enablement' },
+  { icon: Gauge, title: 'Business Applications Assessment' },
+  { icon: Network, title: 'Fractional Architecture Services' },
+];
 
 export function ServicesSection() {
   return (
