@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "home": {
-      "title": "OperonIQ | Consultanță pentru Întreprinderi Agentice",
+      "title": "OperonIQ | Consultanță pentru Companii Agentice",
       "description": "OperonIQ ajută organizațiile să regândească operațiunile, să valorifice date de încredere și să implementeze forțe de muncă digitale bazate pe AI prin platforme moderne de business, automatizare și guvernanță."
     },
     "about": {
@@ -14,7 +14,7 @@
     },
     "contact": {
       "title": "Contact | OperonIQ",
-      "description": "Contactează OperonIQ pentru a discuta despre strategia de Întreprindere Agentică, date de încredere, automatizare, forțe de muncă digitale și guvernanță."
+      "description": "Contactează OperonIQ pentru a discuta despre strategia de Companie Agentică, date de încredere, automatizare, forțe de muncă digitale și guvernanță."
     }
   },
   "Nav": {
@@ -31,8 +31,8 @@
   },
   "Home": {
     "Hero": {
-      "badge": "CONSULTANȚĂ PENTRU ÎNTREPRINDERI AGENTICE",
-      "title": "Construim Întreprinderi Agentice",
+      "badge": "CONSULTANȚĂ PENTRU COMPANII AGENTICE",
+      "title": "Construim Companii Agentice",
       "description": "OperonIQ ajută organizațiile să conecteze oamenii, datele, aplicațiile, automatizarea și AI într-un singur model operațional inteligent.",
       "ctaPrimary": "Începe conversația",
       "ctaSecondary": "Explorează capabilitățile"
@@ -109,7 +109,7 @@
     },
     "OperatingModel": {
       "eyebrow": "Cum Lucrăm",
-      "title": "Cum Prinde Contur Munca într-o Întreprindere Agentică",
+      "title": "Cum Prinde Contur Munca într-o Companie Agentică",
       "description": "De la descoperirea inițială la o operațiune agentică guvernată și scalabilă.",
       "steps": {
         "discover": {
@@ -140,7 +140,7 @@
       "body": "Organizații mid-market și enterprise care își modernizează operațiunile, datele de încredere, platformele de business și guvernanța, astfel încât forțele de muncă digitale bazate pe AI să poată scala cu încredere."
     },
     "FinalCTA": {
-      "title": "Ești pregătit să construiești o Întreprindere Agentică?",
+      "title": "Ești pregătit să construiești o Companie Agentică?",
       "cta": "Începe conversația"
     }
   },
