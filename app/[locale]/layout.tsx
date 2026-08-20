@@ -46,6 +46,20 @@ export default async function RootLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} className="scroll-smooth">
+      <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-QQ209BH5KK" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QQ209BH5KK');
+`,
+          }}
+        />
+      </head>
       <body className="m-0 min-h-screen bg-navy-950 font-sans text-slate-100 antialiased selection:bg-operon-cyan/30 selection:text-white">
         <NextIntlClientProvider messages={globalMessages}>
           {children}
