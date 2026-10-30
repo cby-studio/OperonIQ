@@ -30,7 +30,7 @@ app/
     capabilities/page.tsx     # Capabilities page
     services/page.tsx         # Redirects to /capabilities
     contact/page.tsx          # Contact page (NexIQ chatbot)
-    layout.tsx                # Root <html>/<body>, locale validation, metadata
+    layout.tsx                # Root <html>/<body>, locale validation, metadata, analytics
   api/nexiq/route.ts          # Cloudflare Worker API — Claude + Resend
   globals.css
 
@@ -103,8 +103,25 @@ Full-page marketing site with sections:
 ### `/contact`
 Houses the **NexIQ** AI intake chatbot. NexIQ guides prospective clients through a structured 5-question intake flow powered by Claude, then emails a summary to the notify address via Resend.
 
-### `/capabilities`, `/services`, `/about`
-Static marketing pages with technology ecosystem chips (logo + label) sourced from `/public/logos/`.
+### `/capabilities`
+Six capability pillars with technology ecosystem chips (logo + label) sourced from `/public/logos/` and expandable service cards. The Romanian page is `/ro/capabilities`.
+
+**Agent Factory** sits under **Automation & Agentic AI**. Its English and Romanian content lives at `Capabilities.pillars.05.services.s05-01` in the corresponding message file. The product name stays **Agent Factory** in both languages.
+
+- Updated challenge, outcomes and deliverables cover production-ready agents, reusable components, business-system integrations, evaluation, guardrails and developer/business-user enablement.
+- Four tags describe TypeScript/Python agents, Claude/OpenAI/Azure AI, MCP/tool integrations and evaluations/guardrails. Their existing blue/green pill styles alternate through the positional `TAG_TYPES['s05-01']` configuration in `components/capabilities/CapabilitiesPageContent.tsx`.
+- The **Built with Agent Factory** section showcases **Sofia**, an AI quoting assistant that retrieves furniture products and photos by SKU and turns a chat into a client-ready offer. Its technology line is `Next.js · Supabase · LLM tool calling · Shopify`.
+- A right-aligned **Request a walkthrough →** link (**Solicită o prezentare →** in Romanian) leads to the localized contact page, where NexIQ is available.
+
+Capability items support an optional, localized `showcase` object with `heading`, `title`, `label`, `description`, `stack` and an optional `link: { label, href }`. It renders between Deliverables and the tags as a padded inset panel with a violet section heading. Cards without a showcase retain their existing rendering.
+
+An optional `sectionHeadings` object (`challenge`, `outcomes`, `deliverables`) overrides the shared section labels for an individual card. Agent Factory uses this for the exact Romanian labels without changing other cards. All card and showcase copy belongs in the locale message files; components contain no hardcoded Romanian text.
+
+### `/services`
+Redirects to the localized Capabilities page (`/capabilities` or `/ro/capabilities`).
+
+### `/about`
+Static marketing page with technology ecosystem chips sourced from `/public/logos/`.
 
 ---
 
@@ -118,6 +135,7 @@ The site is available in **English** (default, unprefixed) and **Romanian** (`/r
 - All copy lives in `messages/en.json` / `messages/ro.json`, keyed by page/section. Technology and product names (Microsoft 365, Python, Snowflake, etc.) are intentionally left untranslated.
 - The NexIQ chatbot's system prompt, quick-reply options and UI strings are localized too — the assistant is instructed to respond only in the active locale's language, regardless of what the visitor types. The email notification sent to the OperonIQ team stays in English regardless of locale, since it's internal/administrative.
 - Client components (`NexIQ`, `CapabilitiesPageContent`) only receive the message namespaces they actually use (see `i18n/pick.ts`), so the rest of the site doesn't ship their translations in its page payload.
+- Showcase content and per-card section headings use the same locale message source as other capability fields. Use the locale-aware `Link` from `i18n/navigation.ts` for showcase links: a configured `/contact` destination resolves to `/ro/contact` in Romanian.
 
 To add a locale: add it to `i18n/routing.ts`, add a `messages/<locale>.json` file with the same keys as `en.json`, and add a label to `LanguageSwitcher.tsx`.
 
@@ -144,6 +162,16 @@ Two modes controlled by the request body:
 |---|---|---|
 | Chat | `{ messages, system }` | Proxies to Anthropic Claude API |
 | Email | `{ sendSummary: true, summary }` | Sends intake summary via Resend |
+
+The localized system prompt is read with `t.raw('NexIQSystem')` in `components/NexIQ.tsx`. Its `SUMMARY_JSON:{...}` example contains literal braces, which must not be parsed as ICU translation arguments; using `t('NexIQSystem')` causes the `INVALID_MESSAGE: MALFORMED_ARGUMENT` error on the contact page.
+
+---
+
+## Analytics
+
+Google Analytics is configured in `app/[locale]/layout.tsx` using `next/script` with the `afterInteractive` strategy and stable IDs (`google-analytics-loader` and `google-analytics-init`). The measurement ID is `G-QQ209BH5KK`.
+
+Keep these scripts managed by `next/script`. This prevents React's “Encountered a script tag while rendering React component” error during client-side language switching and avoids duplicate loading or initialization.
 
 ---
 
@@ -210,6 +238,16 @@ RESEND_API_KEY=re_...
 NOTIFY_EMAIL=chubby07@gmail.com
 FROM_EMAIL=onboarding@resend.dev
 ```
+
+### Latest verification — 30 October 2026
+
+- Checked Agent Factory in English and Romanian at **375px, 768px and 1440px**: tags wrap with consistent **8px gaps**, with no card or page overflow. Sofia's panel keeps its inset spacing and **14px vertical / 16px horizontal padding**.
+- Checked Romanian diacritics (`ă`, `â`, `î`, `ș`, `ț`), including comma-below `ș`/`ț`, in the rendered site font.
+- Measured English Sofia showcase text contrast at **5.19:1 or higher** during the layout review, above the WCAG AA normal-text threshold of **4.5:1**.
+- Checked repeated mouse and keyboard accordion toggles, including the existing **200ms chevron transition**, without clipping the taller content.
+- Checked **EN → RO → EN** navigation on Capabilities and Contact without browser console errors. Analytics initialized once, with no duplicate script elements; external analytics requests were mocked.
+- Checked contact-page rendering and chat submission in both languages with mocked API responses, confirming the complete literal system prompt is preserved. These checks did not send live chat requests or notification emails.
+- TypeScript (`npx tsc --noEmit --incremental false`), ESLint on the changed components/layout, and `git diff --check` passed for the implementation changes.
 
 ---
 
