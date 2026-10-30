@@ -243,6 +243,11 @@
         "agentEngineering": "Inginerie de agenți",
         "productEngineering": "Inginerie de produs"
       }
+    },
+    "cta": {
+      "title": "Gata să începi cu procesul, nu cu platforma?",
+      "body": "Spune-ne unde se blochează munca azi. Îți arătăm cum ar putea arăta.",
+      "button": "Începe conversația"
     }
   },
   "Capabilities": {

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { CtaBand } from '@/components/home/CtaBand';
 import { GradientSeparator } from '@/components/home/GradientSeparator';
 import { SiteFrame } from '@/components/home/SiteFrame';
 import { Link } from '@/i18n/navigation';
@@ -304,6 +305,7 @@ function AboutPageContent() {
         </div>
       </section>
 
+      <CtaBand title={t('cta.title')} body={t('cta.body')} ctaLabel={t('cta.button')} />
     </SiteFrame>
   );
 }

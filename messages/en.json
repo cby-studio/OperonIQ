@@ -243,6 +243,11 @@
         "agentEngineering": "Agent Engineering",
         "productEngineering": "Product Engineering"
       }
+    },
+    "cta": {
+      "title": "Ready to start with process, not platform?",
+      "body": "Tell us where work breaks down today. We'll show you what it could look like.",
+      "button": "Start the conversation"
     }
   },
   "Capabilities": {
