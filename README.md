@@ -295,6 +295,21 @@ Output goes to `.open-next/`.
 | `npm run deploy` | Build worker + deploy to Cloudflare |
 | `npm run start` | Start Next.js production server |
 | `npm run lint` | Run ESLint |
+| `npm test` | Run the Vitest test suite once |
+| `npm run test:watch` | Run Vitest in watch mode |
+
+---
+
+## Testing
+
+Automated tests use [Vitest](https://vitest.dev) and Testing Library and live in `tests/`:
+
+- `messages.test.ts` — EN/RO message parity, valid ICU syntax, Romanian comma-below diacritics, NexIQ `SUMMARY_JSON` prompt contract
+- `nexiq-route.test.ts` — `/api/nexiq` chat proxy and Resend email modes (Cloudflare context and `fetch` mocked)
+- `nexiq.test.tsx` — NexIQ chatbot flow in jsdom (quick replies, summary parsing and email, error states)
+- `pick.test.ts` — `pickMessages` helper
+
+No test calls Anthropic or Resend for real.
 
 ---
 
