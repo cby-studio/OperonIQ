@@ -128,7 +128,8 @@ function SendIcon() {
 export function NexIQ() {
   const t = useTranslations();
   const OPENING = t('Contact.chat.opening');
-  const SYSTEM = t('NexIQSystem');
+  // Preserve the literal JSON example instead of parsing its braces as ICU arguments.
+  const SYSTEM = t.raw('NexIQSystem') as string;
   const QUICK_OPTS: Record<number, string[]> = {
     1: t.raw('Contact.chat.quickOpts.area') as string[],
     2: t.raw('Contact.chat.quickOpts.size') as string[],

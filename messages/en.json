@@ -503,18 +503,35 @@
         "services": {
           "s05-01": {
             "name": "Agent Factory",
-            "challenge": "Organisations want to deploy AI agents quickly but lack the reusable tooling and standards to do so at scale.",
+            "challenge": "Organisations want to deploy AI agents quickly, but lack the reusable patterns, integrations and safety standards to move from demo to production.",
             "outcomes": [
-              "Reusable agent component library",
-              "Rapid agent provisioning in days not months",
-              "Consistent quality and safety baseline"
+              "Production-ready agents in weeks, not months",
+              "Reusable components across agents: tools, memory, integrations",
+              "Consistent quality, security and safety baseline"
             ],
             "deliverables": [
-              "Python agent SDK and template repository",
-              "CI/CD pipeline for agent deployment",
-              "Developer enablement programme"
+              "Agent blueprint and template repository (TypeScript & Python)",
+              "Integration layer for business systems (e-commerce, ERP, M365, messaging)",
+              "Evaluation, guardrails and CI/CD pipeline for agent deployment",
+              "Developer and business-user enablement"
             ],
-            "tags": ["Python (LangGraph, AutoGen, SK)", "LLM orchestration & routing"]
+            "showcase": {
+              "heading": "BUILT WITH AGENT FACTORY",
+              "title": "Sofia",
+              "label": "AI quoting assistant",
+              "description": "Pulls products and photos by SKU from an online furniture store and turns a chat conversation into a client-ready offer in minutes.",
+              "stack": "Next.js · Supabase · LLM tool calling · Shopify",
+              "link": {
+                "label": "Request a walkthrough →",
+                "href": "/contact"
+              }
+            },
+            "tags": [
+              "TypeScript & Python agents",
+              "Claude / OpenAI / Azure AI",
+              "MCP & tool integrations",
+              "Evals & guardrails"
+            ]
           },
           "s05-02": {
             "name": "Multi-Agent Architectures",

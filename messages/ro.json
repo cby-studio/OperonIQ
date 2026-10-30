@@ -502,19 +502,41 @@
         "conviction": "Proiectează forțe de muncă digitale care accelerează execuția.",
         "services": {
           "s05-01": {
-            "name": "Fabrica de Agenți",
-            "challenge": "Organizațiile vor să implementeze agenți AI rapid, dar nu au uneltele reutilizabile și standardele necesare pentru a face acest lucru la scară.",
+            "name": "Agent Factory",
+            "challenge": "Organizațiile vor să implementeze rapid agenți AI, dar nu au tiparele reutilizabile, integrările și standardele de siguranță necesare pentru a trece de la demo la producție.",
             "outcomes": [
-              "Bibliotecă reutilizabilă de componente pentru agenți",
-              "Furnizare rapidă de agenți în zile, nu luni",
-              "Bază de referință consistentă pentru calitate și siguranță"
+              "Agenți gata de producție în săptămâni, nu luni",
+              "Componente reutilizabile între agenți: instrumente, memorie, integrări",
+              "Un standard unitar de calitate, securitate și siguranță"
             ],
             "deliverables": [
-              "SDK Python pentru agenți și repository de șabloane",
-              "Pipeline CI/CD pentru implementarea agenților",
-              "Program de capacitare a dezvoltatorilor"
+              "Blueprint de agent și repository de template-uri (TypeScript și Python)",
+              "Strat de integrare cu sistemele de business (e-commerce, ERP, M365, mesagerie)",
+              "Evaluare, guardrails și pipeline CI/CD pentru implementarea agenților",
+              "Program de enablement pentru dezvoltatori și utilizatori de business"
             ],
-            "tags": ["Python (LangGraph, AutoGen, SK)", "Orchestrare & rutare LLM"]
+            "sectionHeadings": {
+              "challenge": "Provocarea",
+              "outcomes": "Rezultate așteptate",
+              "deliverables": "Livrabile"
+            },
+            "showcase": {
+              "heading": "CONSTRUIT CU AGENT FACTORY",
+              "title": "Sofia",
+              "label": "Asistent AI de ofertare",
+              "description": "Preia produsele și fotografiile după SKU din magazinul online de mobilă și transformă o conversație în chat într-o ofertă gata de trimis clientului, în câteva minute.",
+              "stack": "Next.js · Supabase · LLM tool calling · Shopify",
+              "link": {
+                "label": "Solicită o prezentare →",
+                "href": "/contact"
+              }
+            },
+            "tags": [
+              "Agenți TypeScript și Python",
+              "Claude / OpenAI / Azure AI",
+              "MCP și integrări de instrumente",
+              "Evaluări și guardrails"
+            ]
           },
           "s05-02": {
             "name": "Arhitecturi Multi-Agent",

@@ -3,6 +3,7 @@ import { hasLocale } from 'next-intl';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import Script from 'next/script';
 import { pickMessages } from '@/i18n/pick';
 import { routing } from '@/i18n/routing';
 import '../globals.css';
@@ -46,9 +47,18 @@ export default async function RootLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} className="scroll-smooth">
-      <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-QQ209BH5KK" />
-        <script
+      <body className="m-0 min-h-screen bg-navy-950 font-sans text-slate-100 antialiased selection:bg-operon-cyan/30 selection:text-white">
+        <NextIntlClientProvider messages={globalMessages}>
+          {children}
+        </NextIntlClientProvider>
+        <Script
+          id="google-analytics-loader"
+          src="https://www.googletagmanager.com/gtag/js?id=G-QQ209BH5KK"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-analytics-init"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
   window.dataLayer = window.dataLayer || [];
@@ -59,11 +69,6 @@ export default async function RootLayout({ children, params }: Props) {
 `,
           }}
         />
-      </head>
-      <body className="m-0 min-h-screen bg-navy-950 font-sans text-slate-100 antialiased selection:bg-operon-cyan/30 selection:text-white">
-        <NextIntlClientProvider messages={globalMessages}>
-          {children}
-        </NextIntlClientProvider>
       </body>
     </html>
   );

@@ -46,12 +46,30 @@ type Tag = {
   type: 'python' | 'ml';
 };
 
+type Showcase = {
+  heading: string;
+  title: string;
+  label: string;
+  description: string;
+  stack: string;
+  link?: {
+    label: string;
+    href: string;
+  };
+};
+
 type ServiceData = {
   id: string;
   name: string;
   challenge: string;
   outcomes: string[];
   deliverables: string[];
+  sectionHeadings?: {
+    challenge: string;
+    outcomes: string;
+    deliverables: string;
+  };
+  showcase?: Showcase;
   tags?: Tag[];
 };
 
@@ -90,7 +108,7 @@ const TAG_TYPES: Record<string, Array<'python' | 'ml'>> = {
   's03-03': ['python', 'ml'],
   's03-04': ['python', 'ml'],
   's04-03': ['ml'],
-  's05-01': ['python', 'ml'],
+  's05-01': ['python', 'ml', 'python', 'ml'],
   's05-02': ['python', 'ml'],
   's05-03': ['python', 'ml'],
   's05-04': ['python', 'ml'],
@@ -282,7 +300,7 @@ function ServiceCard({
               className="mb-1.5 text-operon-cyan"
               style={{ fontSize: 10, letterSpacing: '0.13em', textTransform: 'uppercase', fontWeight: 600, opacity: 0.75 }}
             >
-              {t('challenge')}
+              {service.sectionHeadings?.challenge ?? t('challenge')}
             </p>
             <p className="text-slate-300" style={{ fontSize: 12, lineHeight: 1.65 }}>
               {service.challenge}
@@ -295,7 +313,7 @@ function ServiceCard({
               className="mb-1.5 text-operon-blue"
               style={{ fontSize: 10, letterSpacing: '0.13em', textTransform: 'uppercase', fontWeight: 600, opacity: 0.8 }}
             >
-              {t('outcomes')}
+              {service.sectionHeadings?.outcomes ?? t('outcomes')}
             </p>
             <ul className="space-y-1.5">
               {service.outcomes.map((o) => (
@@ -308,12 +326,12 @@ function ServiceCard({
           </div>
 
           {/* Deliverables */}
-          <div className={service.tags && service.tags.length > 0 ? 'mb-4' : ''}>
+          <div className={service.showcase || (service.tags && service.tags.length > 0) ? 'mb-4' : ''}>
             <p
               className="mb-1.5 text-operon-green"
               style={{ fontSize: 10, letterSpacing: '0.13em', textTransform: 'uppercase', fontWeight: 600, opacity: 0.8 }}
             >
-              {t('deliverables')}
+              {service.sectionHeadings?.deliverables ?? t('deliverables')}
             </p>
             <ul className="space-y-1.5">
               {service.deliverables.map((d) => (
@@ -324,6 +342,47 @@ function ServiceCard({
               ))}
             </ul>
           </div>
+
+          {/* Showcase */}
+          {service.showcase && (
+            <div className={service.tags && service.tags.length > 0 ? 'mb-4' : ''}>
+              <p
+                className="mb-1.5 text-violet-300"
+                style={{ fontSize: 10, letterSpacing: '0.13em', textTransform: 'uppercase', fontWeight: 600, opacity: 0.8 }}
+              >
+                {service.showcase.heading}
+              </p>
+              <div
+                style={{
+                  border: '0.5px solid rgba(167,139,250,0.2)',
+                  background: 'rgba(255,255,255,0.035)',
+                  borderRadius: 12,
+                  padding: '0.875rem 1rem',
+                }}
+              >
+                <p className="flex flex-wrap items-baseline gap-x-2 gap-y-1" style={{ fontSize: 12, lineHeight: 1.6 }}>
+                  <span className="font-semibold text-white">{service.showcase.title}</span>
+                  <span className="text-slate-400">{service.showcase.label}</span>
+                </p>
+                <p className="mt-1.5 text-slate-300" style={{ fontSize: 12, lineHeight: 1.65 }}>
+                  {service.showcase.description}
+                </p>
+                <p className="mt-2 text-slate-400" style={{ fontSize: 11, lineHeight: 1.6 }}>
+                  {service.showcase.stack}
+                </p>
+                {service.showcase.link && (
+                  <p className="mt-3 text-right" style={{ fontSize: 11, lineHeight: 1.6 }}>
+                    <Link
+                      href={service.showcase.link.href}
+                      className="text-violet-300 underline-offset-2 transition-colors duration-150 hover:text-white hover:underline"
+                    >
+                      {service.showcase.link.label}
+                    </Link>
+                  </p>
+                )}
+              </div>
+            </div>
+          )}
 
           {/* Tags */}
           {service.tags && service.tags.length > 0 && (
@@ -426,6 +485,12 @@ export function CapabilitiesPageContent() {
         challenge: t(`pillars.${id}.services.${sid}.challenge`),
         outcomes: t.raw(`pillars.${id}.services.${sid}.outcomes`) as string[],
         deliverables: t.raw(`pillars.${id}.services.${sid}.deliverables`) as string[],
+        sectionHeadings: t.has(`pillars.${id}.services.${sid}.sectionHeadings`)
+          ? (t.raw(`pillars.${id}.services.${sid}.sectionHeadings`) as ServiceData['sectionHeadings'])
+          : undefined,
+        showcase: t.has(`pillars.${id}.services.${sid}.showcase`)
+          ? (t.raw(`pillars.${id}.services.${sid}.showcase`) as Showcase)
+          : undefined,
         tags: hasTags
           ? tagLabels.map((label, i) => ({ label, type: tagTypes[i] ?? 'python' }))
           : undefined,
