@@ -315,27 +315,39 @@ No test calls Anthropic or Resend for real.
 
 ## Technology Logos
 
-SVG logos in `/public/logos/` are used in capability/technology chip components across the Capabilities, About, and Services pages.
+SVG logos live in `/public/logos/`. The About page's Technology Ecosystem data (groups, items and which logo each item uses) is in `components/about/techEcosystem.ts`; group titles are localized in `About.techEcosystem.groups`.
 
-| File | Technology |
-|---|---|
-| `microsoft-365.svg` | Microsoft 365 |
-| `teams.svg` | Microsoft Teams |
-| `sharepoint.svg` | SharePoint |
-| `viva.svg` | Microsoft Viva |
-| `microsoft-copilot.svg` | Copilot / Copilot Studio |
-| `power-platform.svg` | Power Platform |
-| `power-automate.svg` | Power Automate |
-| `power-bi.svg` | Power BI |
-| `dynamics-365.svg` | Dynamics 365 |
-| `business-central.svg` | Business Central |
-| `microsoft-fabric.svg` | Microsoft Fabric |
-| `azure-ai.svg` | Azure AI / Azure AI Foundry |
-| `azure-openai.svg` | Azure OpenAI |
-| `azure-data-services.svg` | Azure Data Services |
-| `databricks.svg` | Databricks |
-| `snowflake.svg` | Snowflake |
-| `logic-apps.svg` | Logic Apps |
-| `python.svg` | Python |
-| `langchain.svg` | LangChain / LangGraph |
-| `mlflow.svg` | MLflow |
+- **Full-colour brand SVGs** (Microsoft) are rendered greyed out with a CSS filter and show their brand colours on hover.
+- **Monochrome SVGs** (`mono: true`, `fill="currentColor"`) are rendered as a CSS mask in the pill's text colour: light grey, white on hover.
+- **Text-only pills**: any item without an entry in `TECH_LOGOS` — currently Copilot Studio, Azure AI Foundry, Semantic Kernel and OpenAI. To add an icon, drop the SVG into `/public/logos/` and add `'<Name>': { src: '/logos/<file>.svg' }` to `TECH_LOGOS`.
+
+`scripts/fetch-logos.mjs` is a one-off script that copies icons from the `simple-icons` devDependency into `/public/logos/` with `fill="currentColor"`; `simple-icons` is never imported at runtime. Run it with `node scripts/fetch-logos.mjs`. OpenAI is not available in simple-icons, so it stays text-only.
+
+| File | Technology | Style |
+|---|---|---|
+| `microsoft-365.svg` | Microsoft 365 | colour |
+| `teams.svg` | Microsoft Teams | colour |
+| `sharepoint.svg` | SharePoint | colour |
+| `viva.svg` | Microsoft Viva | colour |
+| `microsoft-copilot.svg` | Copilot | colour |
+| `power-platform.svg` | Power Platform | colour |
+| `power-automate.svg` | Power Automate | colour |
+| `power-bi.svg` | Power BI | colour |
+| `dynamics-365.svg` | Dynamics 365 | colour |
+| `business-central.svg` | Business Central | colour |
+| `microsoft-fabric.svg` | Microsoft Fabric | colour |
+| `azure-openai.svg` | Azure OpenAI | colour |
+| `logic-apps.svg` | Logic Apps | colour |
+| `snowflake.svg` | Snowflake | mono |
+| `databricks.svg` | Databricks | mono (simple-icons) |
+| `claude.svg` | Claude | mono (simple-icons) |
+| `python.svg` | Python | mono |
+| `typescript.svg` | TypeScript | mono (simple-icons) |
+| `langgraph.svg` | LangGraph | mono (simple-icons) |
+| `mcp.svg` | Model Context Protocol | mono (simple-icons) |
+| `nextjs.svg` | Next.js | mono (simple-icons) |
+| `supabase.svg` | Supabase | mono (simple-icons) |
+| `vercel.svg` | Vercel | mono (simple-icons) |
+| `cloudflare.svg` | Cloudflare | mono (simple-icons) |
+
+`azure-ai.svg`, `azure-data-services.svg`, `langchain.svg` and `mlflow.svg` are currently unused.

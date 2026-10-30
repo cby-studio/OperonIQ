@@ -208,37 +208,40 @@
       "items": {
         "01": {
           "title": "Business Transformation",
-          "description": "Operating model redesign, process mapping, value-linked transformation roadmaps and structured change enablement. The foundation before any platform or agent is introduced."
+          "description": "Operating model and process redesign — before any platform."
         },
         "02": {
           "title": "Modern Work",
-          "description": "Microsoft 365 strategy, Copilot readiness, knowledge architecture and collaboration governance to build AI-ready workplaces where people and digital workers operate effectively."
+          "description": "Microsoft 365 and Copilot for AI-ready workplaces."
         },
         "03": {
           "title": "Data & Analytics",
-          "description": "Data platform modernisation, semantic layer design, analytics strategy, governance frameworks and AI-ready data foundations using Fabric, Snowflake, Databricks and Power BI."
+          "description": "AI-ready data foundations on Fabric, Snowflake and Databricks."
         },
         "04": {
           "title": "Business Applications",
-          "description": "Dynamics 365, Business Central and Power Platform advisory to connect CRM, ERP and operational workflows — creating the system-of-record layer that AI agents can act on."
+          "description": "Dynamics 365 and Power Platform as the system of record."
         },
         "05": {
           "title": "Automation & Agentic AI",
-          "description": "Agent design and deployment, multi-agent architectures, digital workforce strategy and intelligent automation programmes that reduce manual effort and accelerate execution."
+          "description": "Agents and automation that take repetitive work off people's plates."
         },
         "06": {
           "title": "Governance & Quality",
-          "description": "Responsible AI frameworks, quality engineering, platform governance and automated testing practices that keep transformation controlled, auditable and scalable."
+          "description": "Responsible AI, testing and control — at scale."
         }
-      }
+      },
+      "exploreLink": "Explore all capabilities →"
     },
     "techEcosystem": {
       "eyebrow": "Technology Ecosystem",
-      "description": "We are technology-agnostic in approach and opinionated in execution. The platforms below are the tools we use to deliver transformation — not products we sell.",
+      "description": "We are technology-agnostic in approach and opinionated in execution. These are the platforms we build on — and the foundations of our own products, like Sofia.",
       "groups": {
         "microsoft": "Microsoft Ecosystem",
         "dataCloud": "Data & Cloud",
-        "engineeringAi": "Engineering & AI"
+        "aiModels": "AI Models",
+        "agentEngineering": "Agent Engineering",
+        "productEngineering": "Product Engineering"
       }
     }
   },

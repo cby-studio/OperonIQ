@@ -3,6 +3,8 @@ import { useTranslations } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { GradientSeparator } from '@/components/home/GradientSeparator';
 import { SiteFrame } from '@/components/home/SiteFrame';
+import { Link } from '@/i18n/navigation';
+import { TECH_GROUPS, TECH_LOGOS, type TechLogo } from '@/components/about/techEcosystem';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -18,33 +20,7 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-// ─── Logo map (matches /public/logos/) ───────────────────────────────────────
-
-const LOGO_MAP: Record<string, string> = {
-  'Microsoft 365':    '/logos/microsoft-365.svg',
-  'Teams':            '/logos/teams.svg',
-  'SharePoint':       '/logos/sharepoint.svg',
-  'Viva':             '/logos/viva.svg',
-  'Copilot':          '/logos/microsoft-copilot.svg',
-  'Copilot Studio':   '/logos/microsoft-copilot.svg',
-  'Power Platform':   '/logos/power-platform.svg',
-  'Power Automate':   '/logos/power-automate.svg',
-  'Dynamics 365':     '/logos/dynamics-365.svg',
-  'Business Central': '/logos/business-central.svg',
-  'Microsoft Fabric': '/logos/microsoft-fabric.svg',
-  'Power BI':         '/logos/power-bi.svg',
-  'Snowflake':        '/logos/snowflake.svg',
-  'Databricks':       '/logos/databricks.svg',
-  'Azure AI':         '/logos/azure-ai.svg',
-  'Azure OpenAI':     '/logos/azure-openai.svg',
-  'Azure AI Foundry': '/logos/azure-ai.svg',
-  'Logic Apps':       '/logos/logic-apps.svg',
-  'Python':           '/logos/python.svg',
-  'LangGraph':        '/logos/langchain.svg',
-  'MLflow':           '/logos/mlflow.svg',
-};
-
-// ─── Non-text data (technology names are proper nouns — not translated) ──────
+// ─── Non-text data ────────────────────────────────────────────────────────────
 
 const beliefIds = [
   'processBeforePlatform',
@@ -56,41 +32,39 @@ const beliefIds = [
 
 const expertiseIds = ['01', '02', '03', '04', '05', '06'] as const;
 
-const techGroups = [
-  {
-    key: 'microsoft',
-    items: [
-      'Microsoft 365',
-      'Teams',
-      'SharePoint',
-      'Viva',
-      'Copilot',
-      'Power Platform',
-      'Power Automate',
-      'Copilot Studio',
-      'Dynamics 365',
-      'Business Central',
-      'Microsoft Fabric',
-      'Power BI',
-    ],
-  },
-  {
-    key: 'dataCloud',
-    items: ['Snowflake', 'Databricks', 'Azure AI', 'Azure OpenAI', 'Azure AI Foundry', 'Logic Apps'],
-  },
-  {
-    key: 'engineeringAi',
-    items: ['Python', 'Semantic Kernel', 'LangGraph', 'AutoGen', 'MLflow'],
-  },
-] as const;
-
 // ─── TechChip ─────────────────────────────────────────────────────────────────
 
 function TechChip({ label }: { label: string }) {
-  const logo = LOGO_MAP[label];
+  const logo: TechLogo | undefined = TECH_LOGOS[label];
   return (
-    <span className="inline-flex items-center gap-1.5 rounded border border-white/[0.1] bg-white/[0.03] px-3 py-1.5 text-xs font-medium text-slate-400 transition-colors duration-150 hover:border-white/[0.18] hover:text-slate-300">
-      {logo && <Image src={logo} alt="" width={13} height={13} className="shrink-0" />}
+    <span className="group inline-flex h-8 items-center gap-2 whitespace-nowrap rounded border border-white/[0.1] bg-white/[0.03] px-3 text-xs font-medium text-slate-400 transition-colors duration-150 hover:border-white/[0.18] hover:text-white">
+      {logo?.mono && (
+        // Single-colour SVG used as a mask, so it takes the pill's text colour.
+        <span
+          aria-hidden="true"
+          className="h-3.5 w-3.5 shrink-0 bg-current"
+          style={{
+            maskImage: `url(${logo.src})`,
+            WebkitMaskImage: `url(${logo.src})`,
+            maskSize: 'contain',
+            WebkitMaskSize: 'contain',
+            maskRepeat: 'no-repeat',
+            WebkitMaskRepeat: 'no-repeat',
+            maskPosition: 'center',
+            WebkitMaskPosition: 'center',
+          }}
+        />
+      )}
+      {logo && !logo.mono && (
+        // Full-colour brand SVG: greyed out, brand colours on hover.
+        <Image
+          src={logo.src}
+          alt=""
+          width={14}
+          height={14}
+          className="h-3.5 w-3.5 shrink-0 object-contain opacity-70 brightness-150 grayscale transition duration-150 group-hover:opacity-100 group-hover:brightness-100 group-hover:grayscale-0"
+        />
+      )}
       {label}
     </span>
   );
@@ -271,21 +245,30 @@ function AboutPageContent() {
             {expertiseIds.map((id) => (
               <div
                 key={id}
-                className="group relative overflow-hidden rounded-xl border border-white/[0.08] bg-white/[0.025] p-6 transition duration-300 hover:border-operon-cyan/20 hover:bg-white/[0.042]"
+                className="group relative overflow-hidden rounded-xl border border-white/[0.08] bg-white/[0.025] px-6 py-5 transition duration-300 hover:border-operon-cyan/20 hover:bg-white/[0.042]"
               >
                 <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-operon-cyan/20 to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
-                <span className="mb-4 block text-[11px] font-semibold tracking-[0.22em] text-slate-600">
+                <span className="mb-3 block text-[11px] font-semibold tracking-[0.22em] text-slate-600">
                   {id}
                 </span>
                 <h3 className="text-operon-green text-[13px] font-semibold uppercase tracking-[0.15em]">
                   {t(`expertise.items.${id}.title`)}
                 </h3>
-                <p className="mt-3 text-[13px] leading-[1.7] text-slate-500 transition duration-300 group-hover:text-slate-400">
+                <p className="mt-2 text-[13px] leading-[1.7] text-slate-500 transition duration-300 group-hover:text-slate-400">
                   {t(`expertise.items.${id}.description`)}
                 </p>
               </div>
             ))}
           </div>
+
+          <p className="mt-6 text-right text-sm">
+            <Link
+              href="/capabilities"
+              className="text-operon-cyan underline-offset-4 transition-colors duration-150 hover:text-white hover:underline"
+            >
+              {t('expertise.exploreLink')}
+            </Link>
+          </p>
         </div>
       </section>
 
@@ -305,7 +288,7 @@ function AboutPageContent() {
           </p>
 
           <div className="mt-14 flex flex-col gap-12">
-            {techGroups.map((group) => (
+            {TECH_GROUPS.map((group) => (
               <div key={group.key}>
                 <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.28em] text-slate-600">
                   {t(`techEcosystem.groups.${group.key}`)}

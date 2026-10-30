@@ -24,7 +24,7 @@
     "cta": "Începe conversația"
   },
   "Footer": {
-    "tagline": "© {year} OperonIQ. Orchestrând afaceri inteligente prin date, automatizare și AI."
+    "tagline": "© {year} OperonIQ. Orchestrăm afaceri inteligente prin date, automatizare și AI."
   },
   "LanguageSwitcher": {
     "label": "Limbă"
@@ -147,98 +147,101 @@
   "About": {
     "hero": {
       "eyebrow": "Despre OperonIQ",
-      "titleLine1": "Construit pe Expertiză Profundă.",
-      "titleLine2": "Livrat ca Transformare Integrată.",
+      "titleLine1": "Construit pe expertiză profundă.",
+      "titleLine2": "Livrat ca transformare integrată.",
       "body": "OperonIQ reunește practicieni seniori din transformare de business, regândirea proceselor, arhitectură de date, platforme enterprise, automatizare inteligentă și AI — unificați într-un singur model de livrare care conectează intenția strategică la schimbarea operațională măsurabilă."
     },
     "conviction": {
-      "eyebrow": "Convingerea Noastră",
+      "eyebrow": "Convingerea noastră",
       "title": "Transformarea reală începe înainte de tehnologie.",
-      "p1": "Înainte ca orice platformă să fie selectată sau orice agent AI implementat, procesul de business trebuie înțeles, regândit și asumat de oamenii care îl conduc. Tehnologia suprapusă peste procese slab definite sau fragmentate nu creează capabilitate — creează complexitate la scară.",
+      "p1": "Înainte ca orice platformă să fie selectată sau orice agent AI implementat, procesul de business trebuie înțeles, regândit și asumat de oamenii care îl conduc. Tehnologia pusă peste procese slab definite sau fragmentate nu creează capabilitate — creează complexitate, la scară.",
       "p2Prefix": "OperonIQ tratează",
       "p2Bold": "regândirea proceselor de business ca fundație a fiecărui angajament",
-      "p2Suffix": ". Mapăm modul în care circulă efectiv munca, identificăm unde se blochează și proiectăm modelul operațional țintă înainte de a recomanda vreun instrument sau platformă. Aceasta nu este o etapă de descoperire — este chiar munca.",
-      "calloutLabel": "Abordarea Noastră privind Regândirea Proceselor",
+      "p2Suffix": ". Mapăm modul în care circulă efectiv munca, identificăm unde se blochează și proiectăm modelul operațional țintă înainte de a recomanda vreun instrument sau platformă. Nu este o simplă etapă de analiză — este însăși munca.",
+      "calloutLabel": "Abordarea noastră privind regândirea proceselor",
       "calloutItems": [
         "Mapăm procesele actuale, punctele de decizie și blocajele între funcțiuni",
-        "Proiectăm modelul operațional țintă cu asumare clară și legătură cu valoarea",
+        "Proiectăm modelul operațional țintă, cu responsabilități clare și legat direct de valoarea de business",
         "Identificăm unde automatizarea, agenții AI și datele pot îmbunătăți procesele regândite",
         "Validăm impactul schimbării și aliniem leadershipul înainte de a începe implementarea"
       ],
       "beliefs": {
         "processBeforePlatform": {
-          "label": "Procesul Înaintea Platformei",
+          "label": "Procesul înaintea platformei",
           "note": "Claritatea modelului operațional precede orice selecție de tehnologie."
         },
         "trustedData": {
-          "label": "Date de Încredere",
-          "note": "Informații guvernate, cu calitate asigurată, la baza fiecărei decizii."
+          "label": "Date de încredere",
+          "note": "Date guvernate și verificate, la baza fiecărei decizii."
         },
         "intelligentAutomation": {
-          "label": "Automatizare Inteligentă",
+          "label": "Automatizare inteligentă",
           "note": "Automatizare care raționează, se adaptează și escaladează — nu doar execută reguli."
         },
         "responsibleAi": {
-          "label": "AI Responsabil",
+          "label": "AI responsabil",
           "note": "Implementat cu explicabilitate, echitate și supraveghere umană integrate."
         },
         "measurableOutcomes": {
-          "label": "Rezultate Măsurabile",
+          "label": "Rezultate măsurabile",
           "note": "Valoare validată la fiecare etapă, nu doar la închiderea programului."
         }
       }
     },
     "why": {
       "eyebrow": "De ce OperonIQ",
-      "title": "Piața fragmentează ceea ce organizațiile au nevoie să fie unitar.",
+      "title": "Organizațiile au nevoie de un tot unitar. Piața le oferă bucăți.",
       "p1": "Majoritatea firmelor de consultanță sunt organizate în jurul unei singure discipline — consultanță de business, inginerie de date, platforme Microsoft sau strategie AI. Clienții rămân să coordoneze între furnizori, să concilieze recomandări divergente și să absoarbă lacunele care apar între specializări.",
-      "p2": "OperonIQ a fost creată pentru a închide aceste lacune. Practicienii noștri au profunzime în business, date, platforme și AI — iar modelul nostru de livrare este conceput astfel încât aceste discipline se susțin reciproc, nu operează secvențial.",
+      "p2": "OperonIQ a fost creată pentru a închide aceste lacune. Practicienii noștri au experiență solidă în business, date, platforme și AI — iar modelul nostru de livrare face ca aceste discipline să se susțină reciproc, nu să funcționeze secvențial.",
       "marketLabel": "Ce oferă piața separat",
       "marketItems": [
-        "Consultanță de Business",
-        "Consultanță de Date",
+        "Consultanță de business",
+        "Consultanță de date",
         "Consultanță Microsoft",
         "Consultanță AI"
       ],
       "unify": "OperonIQ le unifică pe toate într-un singur model de transformare integrat."
     },
     "expertise": {
-      "eyebrow": "Expertiza Noastră",
+      "eyebrow": "Expertiza noastră",
       "description": "Șase arii de capabilitate integrate, fiecare susținută de practicieni seniori cu cunoștințe profunde de domeniu și experiență practică de livrare.",
       "items": {
         "01": {
-          "title": "Transformare de Business",
-          "description": "Regândirea modelului operațional, mapare de procese, foi de parcurs pentru transformare legate de valoare și facilitarea structurată a schimbării. Fundația înainte de introducerea oricărei platforme sau agent."
+          "title": "Transformare de business",
+          "description": "Model operațional și procese regândite — înaintea oricărei platforme."
         },
         "02": {
-          "title": "Muncă Modernă",
-          "description": "Strategie Microsoft 365, pregătire pentru Copilot, arhitectură a cunoștințelor și guvernanță a colaborării pentru a construi locuri de muncă pregătite pentru AI, în care oamenii și lucrătorii digitali operează eficient."
+          "title": "Modern Workplace",
+          "description": "Microsoft 365 și Copilot pentru locuri de muncă pregătite pentru AI."
         },
         "03": {
-          "title": "Date & Analitică",
-          "description": "Modernizarea platformei de date, design al stratului semantic, strategie de analitică, cadre de guvernanță și fundații de date pregătite pentru AI folosind Fabric, Snowflake, Databricks și Power BI."
+          "title": "Date și analitică",
+          "description": "Fundații de date pregătite pentru AI, pe Fabric, Snowflake și Databricks."
         },
         "04": {
-          "title": "Aplicații de Business",
-          "description": "Consultanță Dynamics 365, Business Central și Power Platform pentru a conecta CRM, ERP și fluxurile de lucru operaționale — creând stratul de sisteme de evidență pe care agenții AI pot acționa."
+          "title": "Aplicații de business",
+          "description": "Dynamics 365 și Power Platform ca sisteme de referință."
         },
         "05": {
-          "title": "Automatizare & AI Agentic",
-          "description": "Design și implementare de agenți, arhitecturi multi-agent, strategie a forței de muncă digitale și programe de automatizare inteligentă care reduc efortul manual și accelerează execuția."
+          "title": "Automatizare și AI agentic",
+          "description": "Agenți și automatizări care preiau munca repetitivă."
         },
         "06": {
-          "title": "Guvernanță & Calitate",
-          "description": "Cadre de AI responsabil, inginerie a calității, guvernanță a platformei și practici de testare automatizată care mențin transformarea controlată, auditabilă și scalabilă."
+          "title": "Guvernanță și calitate",
+          "description": "AI responsabil, testare și control — la scară."
         }
-      }
+      },
+      "exploreLink": "Vezi toate capabilitățile →"
     },
     "techEcosystem": {
-      "eyebrow": "Ecosistem Tehnologic",
-      "description": "Suntem agnostici din punct de vedere tehnologic în abordare și fermi în execuție. Platformele de mai jos sunt instrumentele pe care le folosim pentru a livra transformarea — nu produse pe care le vindem.",
+      "eyebrow": "Ecosistem tehnologic",
+      "description": "Suntem agnostici în alegerea tehnologiei și fermi în execuție. Acestea sunt platformele pe care construim — și fundația propriilor noastre produse, precum Sofia.",
       "groups": {
         "microsoft": "Ecosistem Microsoft",
-        "dataCloud": "Date & Cloud",
-        "engineeringAi": "Inginerie & AI"
+        "dataCloud": "Date și cloud",
+        "aiModels": "Modele AI",
+        "agentEngineering": "Inginerie de agenți",
+        "productEngineering": "Inginerie de produs"
       }
     }
   },

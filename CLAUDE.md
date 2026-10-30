@@ -30,6 +30,7 @@ Vitest config is `vitest.config.mts` (`@/` alias, Node environment by default; c
 - `tests/messages.test.ts` — `en.json`/`ro.json` have identical keys, types and array lengths (except optional `sectionHeadings` overrides); all `t()` strings are valid ICU (`NexIQSystem` is exempt as it is read with `t.raw`); no cedilla `ş`/`ţ` in Romanian; the system prompt still requests `SUMMARY_JSON` with every field.
 - `tests/nexiq-route.test.ts` — `/api/nexiq` route with `@opennextjs/cloudflare` mocked: Anthropic proxying (model, headers, body), validation errors, `process.env` fallback, Resend email, HTML escaping.
 - `tests/nexiq.test.tsx` — the NexIQ client component via Testing Library: literal system prompt sent, quick replies, `SUMMARY_JSON` stripped and emailed, error states.
+- `tests/techEcosystem.test.ts` — About tech ecosystem data: group titles in both locales, logo files exist, no reused logo files, mono SVGs are single-colour, text-only pills.
 - `tests/pick.test.ts` — `pickMessages`.
 
 When adding a message namespace, page section or API field, extend the matching test. If you add a new message read with `t.raw` that contains `{ }`, add its path to `RAW_MESSAGES` in `tests/messages.test.ts`.
@@ -57,6 +58,6 @@ When adding a message namespace, page section or API field, extend the matching 
 - Keep Google Analytics as the two `next/script` tags (`afterInteractive`, ids `google-analytics-loader` / `google-analytics-init`). Raw `<script>` tags cause React errors and duplicate init on language switch.
 - The NexIQ notification email stays in English regardless of locale; the chatbot itself must answer only in the active locale's language. User values in the email are HTML-escaped via `escapeHtml` — keep that when adding fields.
 - Styling: Tailwind with custom tokens in `tailwind.config.ts` (`navy-950/900/850`, `operon-blue`, `operon-cyan`, `operon-green`; animations `slow-float`, `signal-pulse`, `gradient-shift`). Dark navy theme; icons from `lucide-react`. Use the `@/` path alias.
-- Technology logos live in `public/logos/`. The root-level `langchain.svg`, `mlflow.svg`, `python.svg` are stray duplicates, and `workers/nexiq.js` is a legacy standalone worker superseded by `app/api/nexiq/route.ts` (not referenced by the build).
+- Technology logos live in `public/logos/`; About-page ecosystem groups and the label → logo map are in `components/about/techEcosystem.ts` (items without a logo render as text-only pills; `mono: true` for `currentColor` SVGs). `scripts/fetch-logos.mjs` regenerates the simple-icons SVGs — never import `simple-icons` at runtime, and don't use its `githubcopilot`/`microsoftoffice` icons for Microsoft products. The root-level `langchain.svg`, `mlflow.svg`, `python.svg` are stray duplicates, and `workers/nexiq.js` is a legacy standalone worker superseded by `app/api/nexiq/route.ts` (not referenced by the build).
 - Adding a locale: update `i18n/routing.ts`, add `messages/<locale>.json` with the same keys, add a label in `LanguageSwitcher.tsx`.
 - When behaviour or content structure changes, update `README.md` accordingly.
