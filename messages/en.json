@@ -24,7 +24,8 @@
     "cta": "Start the Conversation"
   },
   "Footer": {
-    "tagline": "© {year} OperonIQ. Orchestrating Intelligent Business through Data, Automation & AI."
+    "tagline": "© {year} OperonIQ. Orchestrating Intelligent Business through Data, Automation & AI.",
+    "legal": "OperonIQ is a brand of {company} · CUI {cui}"
   },
   "LanguageSwitcher": {
     "label": "Language"

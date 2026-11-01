@@ -24,7 +24,8 @@
     "cta": "Începe conversația"
   },
   "Footer": {
-    "tagline": "© {year} OperonIQ. Orchestrăm afaceri inteligente prin date, automatizare și AI."
+    "tagline": "© {year} OperonIQ. Orchestrăm afaceri inteligente prin date, automatizare și AI.",
+    "legal": "OperonIQ este un brand al {company} · CUI {cui}"
   },
   "LanguageSwitcher": {
     "label": "Limbă"
